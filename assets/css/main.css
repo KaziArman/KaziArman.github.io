@@ -3328,6 +3328,26 @@ input, select, textarea {
 				padding-left: 0;
 			}
 
+		/* Nav2 */
+
+			#nav2 {
+				height: 44px;
+				line-height: 34px;
+				font-size: 12px;
+			}
+
+				#nav2 a {
+					padding: 0 0.75em;
+					border-radius: 15px;
+					height: inherit;
+					line-height: inherit;
+					border-radius: 0;
+				}
+
+					#nav2 a:hover {
+						background-color: white;
+					}
+
 		/* Main */
 
 			#main {
