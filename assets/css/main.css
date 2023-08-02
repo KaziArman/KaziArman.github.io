@@ -2296,8 +2296,8 @@ input, select, textarea {
 		z-index: 10000;
 		cursor: default;
 		height: 46px;
-		line-height: 34px;
-		font-size: 12px;
+		line-height: 40px;
+		font-size: 16px;
 	}
 
 		#nav2 ul {
@@ -3293,7 +3293,26 @@ input, select, textarea {
 			body, input, select, textarea {
 				font-size: 12pt;
 			}
+        /* Nav2 */
 
+			#nav2 {
+
+				height: 46px;
+				line-height: 34px;
+				font-size: 18px;
+			}
+
+				#nav2 a {
+					padding: 0 2em;
+					border-radius: 15px;
+					height: inherit;
+					line-height: inherit;
+					border-radius: 0;
+				}
+
+					#nav2 a:hover {
+						background-color: white;
+					}
 	}
 
 /* Large */
@@ -3318,6 +3337,26 @@ input, select, textarea {
 				#header > .inner {
 					margin-bottom: 0;
 				}
+        /* Nav2 */
+
+			#nav2 {
+				height: 46px;
+				line-height: 34px;
+				font-size: 16px;
+			}
+
+				#nav2 a {
+					padding: 0 0.75em;
+					border-radius: 15px;
+					height: inherit;
+					line-height: inherit;
+					border-radius: 0;
+				}
+
+					#nav2 a:hover {
+						background-color: white;
+					}
+
 
 		/* Footer */
 
