@@ -11,7 +11,7 @@ u, i, center, dl, dt, dd, ol, ul, li, fieldset,
 form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
-footer, header,header2, hgroup, menu, nav, output, ruby,
+footer, header,header2, hgroup, menu, nav, nav2, output, ruby,
 section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -21,7 +21,7 @@ section, summary, time, mark, audio, video {
 	vertical-align: baseline;}
 
 article, aside, details, figcaption, figure,
-footer, header, header2, hgroup, menu, nav, section {
+footer, header, header2, hgroup, menu, nav, nav2, section {
 	display: block;}
 
 @keyframes color-change {
@@ -34,6 +34,9 @@ footer, header, header2, hgroup, menu, nav, section {
   100% {color: #f00;}
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 h2 a {
   text-decoration: none;
@@ -265,48 +268,60 @@ input, select, textarea {
 
 	.container {
 		margin: 0 auto;
-		max-width: calc(100% - 4em);
-		width: 100%;
+		max-width: calc(100% - 50px);
+		width: 1200px;
 	}
 
-		.container.xsmall {
-			width: 25%;
-		}
-
-		.container.small {
-			width: 50%;
-		}
-
 		.container.medium {
-			width: 75%;
+			width: 900px;
 		}
 
-		.container.large {
-			width: 125%;
+		@media screen and (max-width: 1680px) {
+
+			.container {
+				width: 1200px;
+			}
+
+				.container.medium {
+					width: 900px;
+				}
+
 		}
 
-		.container.xlarge {
-			width: 150%;
-		}
+		@media screen and (max-width: 1280px) {
 
-		.container.max {
-			width: 100%;
+			.container {
+				width: 960px;
+			}
+
+				.container.medium {
+					width: 720px;
+				}
+
 		}
 
 		@media screen and (max-width: 980px) {
 
 			.container {
-				width: 100% !important;
-				max-width: 100% !important;
+				width: 100%;
 			}
+
+				.container.medium {
+					width: 75%;
+				}
 
 		}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 736px) {
 
 			.container {
-				max-width: calc(100% - 3em);
+				width: 100%;
+				max-width: calc(100% - 30px);
 			}
+
+				.container.medium {
+					width: 100%;
+				}
 
 		}
 
@@ -2267,6 +2282,76 @@ input, select, textarea {
 			ul.icons li .icon:before {
 				font-size: 1.5em;
 			}
+/* Nav */
+
+	#nav2 {
+		background: rgba(39, 40, 51, 0.965);
+		background-blend-mode: overlay;
+		box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.25);
+		text-align: center;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 10000;
+		cursor: default;
+		height: 3.5em;
+		line-height: 3.5em;
+	}
+
+		#nav2 ul {
+			margin-bottom: 0;
+			list-style: none;
+			padding-left: 0;
+		}
+
+		#nav2 li {
+			display: inline-block;
+			padding-left: 0;
+		}
+
+		#nav2 a {
+			-moz-transition: background-color .2s ease-in-out;
+			-webkit-transition: background-color .2s ease-in-out;
+			-ms-transition: background-color .2s ease-in-out;
+			transition: background-color .2s ease-in-out;
+			position: relative;
+			display: block;
+			color: #fff;
+			text-decoration: none;
+			outline: 0;
+			font-weight: 600;
+			border-radius: 15px;
+			color: #fff;
+			height: 2.5em;
+			line-height: 2.5em;
+			padding: 0 1.5em;
+		}
+
+			#nav2 a:hover {
+				color: #00BFBF !important;
+				border-radius: 30px;
+				background: white;
+			}
+
+			#nav2 a.active {
+				background: #484848;
+			}
+
+				#nav2 a.active:before {
+					content: '';
+					display: block;
+					position: absolute;
+					bottom: -0.6em;
+					left: 50%;
+					margin-left: -0.75em;
+					border-left: solid 0.75em transparent;
+					border-right: solid 0.75em transparent;
+					border-top: solid 0.6em #282828;
+				}
+
+
+
 
 /* Labeled Icons */
 
@@ -3325,6 +3410,25 @@ input, select, textarea {
 						margin-left: 0.75em;
 						padding-left: 0.75em;
 					}
+		/* Nav2 */
+
+			#nav2 {
+				height: 60px;
+				line-height: 34px;
+				font-size: 12px;
+			}
+
+				#nav2 a {
+					padding: 0 0.75em;
+					border-radius: 15px;
+					height: inherit;
+					line-height: inherit;
+					border-radius: 0;
+				}
+
+					#nav2 a:hover {
+						background-color: white;
+					}
 
 		/* Main */
 
@@ -3414,6 +3518,27 @@ input, select, textarea {
 				.poptrox-popup .nav-previous:before {
 					margin-top: -1em;
 				}
+
+		/* Nav2 */
+
+			#nav2 {
+				height: 80px;
+				line-height: 44px;
+				font-size: 12px;
+			}
+
+				#nav2 a {
+					padding: 0 0.75em;
+					border-radius: 15px;
+					height: inherit;
+					line-height: inherit;
+					border-radius: 0;
+				}
+
+					#nav2 a:hover {
+						background-color: white;
+					}
+
 		/* Nav */
 
 			#page-wrapper {
@@ -3621,5 +3746,25 @@ input, select, textarea {
 				margin-left: 0;
 				padding-left: 0;
 			}
+
+		/* Nav2 */
+
+			#nav2 {
+				height: 94px;
+				line-height: 34px;
+				font-size: 12px;
+			}
+
+				#nav2 a {
+					padding: 0 0.75em;
+					border-radius: 15px;
+					height: inherit;
+					line-height: inherit;
+					border-radius: 0;
+				}
+
+					#nav2 a:hover {
+						background-color: white;
+					}
 
 	}
