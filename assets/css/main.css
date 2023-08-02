@@ -2297,7 +2297,7 @@ input, select, textarea {
 		cursor: default;
 		height: 46px;
 		line-height: 40px;
-		font-size: 14px;
+		font-size: 13px;
 	}
 
 		#nav2 ul {
@@ -3342,7 +3342,7 @@ input, select, textarea {
 			#nav2 {
 				height: 46px;
 				line-height: 34px;
-				font-size: 14px;
+				font-size: 13px;
 			}
 
 				#nav2 a {
