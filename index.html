@@ -8,32 +8,19 @@
 		<link rel="stylesheet" href="assets/css/main.css"/>
 	</head>
 
-	<header id="header2">
-		<nav id="nav">
-			<ul>
-				<li><a class="button" onclick="scrollToSection('two')">Research Works & Publications</a></li>
-				<li><a class="button" onclick="scrollToSection('three')">Work Experiences</a></li>
-				<li><a class="button" onclick="scrollToSection('four')">Projects</a></li>
-				<li><a class="button" onclick="scrollToSection('five')">Certifications</a></li>
-				<li><a class="button" onclick="scrollToSection('six')">Achievements</a></li>
-				<li><a class="button" onclick="scrollToSection('seven')">Extra Curricular Activities</a></li>
-				<li><a class="button primary" onclick="scrollToSection('eight')">Contact Me</a></li>
-				<li></li>
-			</ul>
-			<script>
-				function scrollToSection(sectionId) {
-					const section = document.getElementById(sectionId);
-					if (section) {
-						section.scrollIntoView({
-							behavior: 'smooth'
-						});
-					}
-				}
-			</script>
-		</nav>
-	</header>
-
 	<body class="is-preload">
+		<!-- Nav -->
+			<nav id="nav2">
+				<ul class="container">
+					<li><a href="#two" onclick="scrollToSection('two')">Research Works & Publications</a></li>
+					<li><a href="#three">Work Experiences</a></li>
+					<li><a href="#four">Projects</a></li>
+					<li><a href="#five">Certifications</a></li>
+					<li><a href="#six">Achievements</a></li>
+					<li><a href="#seven">Extra Curricular Activities</a></li>
+					<li><a href="#eight">Contact</a></li>
+				</ul>
+			</nav>
 		<header id="header">
 				<div class="inner">
 					<a href="https://drive.google.com/file/d/1pRVsJTV6EnJiwLccPbS8Xh4KuocvXHzK/view?usp=sharing" class="image avatar"><img src="images/rahatpp.jpg" alt="" /></a>
@@ -45,6 +32,7 @@
         
 		<!-- Main -->
 			<div id="main">
+
 				<!-- One -->
 					<section id="one">
 						<header class="major">
@@ -69,32 +57,44 @@
 
 				<!-- Two -->
 					<section id="two">
-						<h2 style="color:rgb(10, 1, 1);"><b>Research Works & Publications       </b><a class="actions" href="elements.html">   Ongoing Research</a></h2>
+						<b style="color: black;font-weight: bold;font-size: 14px;">  ( </b><b style="color: green;font-weight: bold;font-size: 14px;">Published </b><b style="color: black;font-size: 14px;">: 2, </b><b style="color: #007F7F;font-weight: bold;font-size: 14px;">Accepted </b><b style="color: black;font-size: 14px;">: 1, </b><b style="color: red;font-weight: bold;font-size: 14px;">Under Review </b><b style="color: black;font-size: 14px;">: 4 </b><b style="color: black;font-weight: bold;font-size: 14px;">  )</b>
+						<h2 style="color:rgb(10, 1, 1);"><b>Research Works & Publications  </b><a class="actions" href="elements.html">   Ongoing Research</a></h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/thesis IN.PNG" class="image fit thumb"><img src="images/fulls/thesis.png" alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/1sj29DFsk215e2rIzieNrqXeZbLcQ93EO/view?usp=sharing">Optimization of Selective Laser Sintering (SLS) 3D Printing of Thermoplastic Polyurethane Elastomer: A Statistical Approach</a></h3>
-								<p>The goal of this research was to use response surface methodology to identify the optimal values of fabrication parameters that would result in the highest level of printing quality and then validate that through SEM testing</br>
-									Currently, it is undergoing review in <b>Journal of Manufacturing and Materials Processing</b> for publication.</p>
+								<a href="images/fulls/SLS Abstract.PNG" class="image fit thumb"><img src="images/fulls/sls cover.png" alt="" /></a>
+								<h3><a href="https://drive.google.com/file/d/1p2DXAEs3ecCjF93_Yf__hShjqsXljBcx/view?usp=sharing">Optimization of Selective Laser Sintering (SLS) 3D Printing of Thermoplastic Polyurethane Elastomer: A Statistical Approach</a><p><b style="color: red;font-weight: bold;">Under Review </b>in <b style="color: black;font-weight: bold;">Journal of Manufacturing and Materials Processing</b></p></h3>
+								<p>This research seeks to optimize selective laser sintering process parameters for thermoplastic polyurethane powder to achieve high-quality 3D printed parts. The goal is to determine the ideal settings for layer thickness and laser power to maximize print efficiency and mechanical properties through modeling and experimental validation.</br></p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/breast abstract.PNG" class="image fit thumb"><img src="images/fulls/breast cover.png" alt="" /></a>
+								<h3><a href="https://drive.google.com/file/d/1PmQaF06svkkzsUFcCcvYn2c36A-L9asu/view?usp=sharing">Advancing Breast Cancer Prediction: Comparative Analysis of ML models and Deep Learning-Based Multi-Model Ensembles on Original and Synthetic Datasets</a><p><b style="color: red;font-weight: bold;">Under Review </b>in <b style="color: black;font-weight: bold;">Biomedical Signal Processing and Control Journal</b></p></h3>
+								<p>This research aims to enhance breast cancer diagnosis through a comparative evaluation of various machine learning and deep learning techniques using both original and synthetic datasets. The goal is to identify an optimal approach or combination of approaches that can improve prediction accuracy and contribute to the advancement of breast cancer diagnosis.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/fuzzy abstract.PNG" class="image fit thumb"><img src="images/fulls/fuzzy cover.png" alt="" /></a>
+								<h3><a href="https://drive.google.com/file/d/1CzFUF5eDlxzay_l1lMf730dMzI-n9mkI/view?usp=sharing">Supplier selection using machine learning integrated fuzzy AHP and Bayesian Belief Network approach: Case study of a jute company</a><p><b style="color: red;font-weight: bold;">Under Review </b>in <b style="color: black;font-weight: bold;">Expert Systems With Applications Journal</b></p></h3>
+								<p>This research seeks to optimize jute yarn supplier selection for a Bangladeshi company by integrating fuzzy AHP, Bayesian belief networks, and machine learning techniques. The goal is to develop an accurate data-driven model for weighing criteria, assessing supplier performance, analyzing risks, and identifying ideal suppliers to improve procurement decisions.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/heart abstract.PNG" class="image fit thumb"><img src="images/fulls/heart cover.png" alt="" /></a>
+								<h3><a href="https://drive.google.com/file/d/1KwQ_9pYDZhtZVEpEOf6sntnKAugpymbR/view?usp=sharing">Machine learning-based models for cardiovascular disease prediction</a><p><b style="color: red;font-weight: bold;">Under Review </b>in <b style="color: black;font-weight: bold;">Biomedical Signal Processing and Control Journal</b></p></h3>
+								<p>This research seeks to identify the optimal machine learning model for accurately diagnosing cardiovascular disease early and conduct risk analysis using Bayesian belief networks on the optimal model. By determining the highest-performing ML approach, the aim is to develop an effective disease prediction system that improves clinical decision-making and patient outcomes through early detection and intervention.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/knn in.PNG" class="image fit thumb"><img src="images/fulls/knn cover.png"  alt="" /></a>
+								<h3><a href="https://drive.google.com/file/d/1Fyh0gxIbjtSrPRZzE6yT72-oJlJfOJhC/view?usp=sharing">Comparative Analysis of KNN and SVM in Multicriteria Inventory Classification Using TOPSIS</a><p><b style="color: green;font-weight: bold;">Accepted </b>in <b style="color: black;font-weight: bold;">International Journal of Information Technology</b></p></h3>
+								<p>This research compares ML models to identify the optimal model for rapidly classifying new inventory in a multicriteria ABC system. By leveraging an initial TOPSIS analysis and evaluating SVM and KNN accuracy in predicting classes for new items, the goal is to find the most accurate model which will enable efficient categorization of newly added items based on multiple properties, avoiding disruption in competitive environments.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/Email Stick.PNG" class="image fit thumb"><img src="images/fulls/cover_stick.png" alt="" /></a>
-								<h3><a href="https://link.springer.com/chapter/10.1007/978-3-030-24322-7_7">Development of an Inexpensive Proficient Smart Walking Stick for Visually Impaired People</a></h3>
-								<p>This research represents a medical engineering technology to develop an extremely low cost & smart walking stick as assistance for visually impaired people. <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C6KttPcAAAAJ&citation_for_view=C6KttPcAAAAJ:u5HHmVD_uO8C">click here</a></br>
-								   It has been published in <b>Springer</b> and till now received <b>5 citations</b></p>
+								<h3><a href="https://link.springer.com/chapter/10.1007/978-3-030-24322-7_7">Development of an Inexpensive Proficient Smart Walking Stick for Visually Impaired People</a><p><b style="color: #007F7F;font-weight: bold;">Published </b>in <b style="color: black;font-weight: bold;">Advances in Decision Sciences, Image Processing, Security and Computer Vision</b></p></h3>
+								<p>This research represents a medical engineering technology to develop an extremely low cost smart walking stick as assistance for visually impaired people. <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C6KttPcAAAAJ&citation_for_view=C6KttPcAAAAJ:u5HHmVD_uO8C">click here</a></br>
+								   It has been published in <b style="font-weight: bold;">Springer</b> and till now received <b>5 citations</b></p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/Email Safety.PNG" class="image fit thumb"><img src="images/fulls/cover_safety.png" alt="" /></a>
-								<h3><a href="https://www.astesj.com/v06/i02/p96/#1477470858207-d194995f-690d">Design And Development Of An Advanced Affordable Wearable Safety Device For Women: Freedom Against Fearsome</a></h3>
-								<p>In this study, the aim was to develop safety devices for women named BOHNNI and BADHON which resemble legitimate jewelry. <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C6KttPcAAAAJ&citation_for_view=C6KttPcAAAAJ:9yKSN-GCB0IC">click here</a></br>
-									It has been published in <b>ASTES Journal</b> and till now received <b>3 citations and <a href="https://www.researchgate.net/publication/350829762_Design_and_Development_of_an_Advanced_Affordable_Wearable_Safety_Device_for_Women_Freedom_Against_Fearsome">1,182 reads</a></b>
-								</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/ABC in.PNG" class="image fit thumb"><img src="images/fulls/cover abc.png"  alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/1t2gJZ1ZdRFT7jxnsMMStEXLSdQ5Fm0sI/view?usp=sharing">A Hybrid Methodology for Inventory Classification with the Application of Machine Learning Algorithms</a></h3>
-								<p>The goal behind this study is to build up a hybrid approach that incorporates ABC analysis, Machine Learning (ML) algorithms with Multi-Criteria Decision-Making (MCDM) techniques to adequately direct multi-attribute inventory analysis.</br>
-								   We are currently edifying the study for publishing it in a Journal</p>
+								<h3><a href="https://www.astesj.com/v06/i02/p96/#1477470858207-d194995f-690d">Design And Development Of An Advanced Affordable Wearable Safety Device For Women: Freedom Against Fearsome</a><p><b style="color: #007F7F;font-weight: bold;">Published </b>in <b style="color: black;font-weight: bold;">Advances in Science, Technology and Engineering Systems Journal</b></p></h3>
+								<p>This research develops voice-activated safety jewelry for women using GPS and alerts to improve personal security. The goal is integrating discreet electronics into daily accessories for accessible and effective emergency response. <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C6KttPcAAAAJ&citation_for_view=C6KttPcAAAAJ:9yKSN-GCB0IC">click here</a></p>
 							</article>
 							
 							<article class="col-6 col-12-xsmall work-item">
@@ -105,34 +105,33 @@
 						</div>
 					</section>
 
-					<hr>
 					<section id = 'three'>
-						<h2><b>Work Experiences</b></h2>
+						<h2 style="color:rgb(10, 1, 1);"><b>Work Experiences</b></h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/lecturer.PNG" class="image fit thumb"><img src="images/fulls/european_cover.png" alt="" /></a>
+								<a href="images/fulls/lecturer.png" class="image fit thumb"><img src="images/fulls/european_cover.png" alt="" /></a>
 								<h3><a href="https://drive.google.com/file/d/1EmxrWYJyULfIQinpQquASow7eBqq6-sY/view?usp=sharing">Lecturer of Industrial & Production Engineering Department</a></h3>
 								<p>Former Lecturer of Industrial & Production Engineering Department of European University, Bangladesh.</br>
-								Please <a href="images/fulls/lecturer.PNG">click here</a> to look at the courses that I have taken there.</p>
+								Please <a href="images/fulls/lecturer.png">click here</a> to look at the courses that I have taken there.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/reviewer in.PNG" class="image fit thumb"><img src="images/fulls/reviewer_cover.png" alt="" /></a>
+								<a href="images/fulls/reviewer in.png" class="image fit thumb"><img src="images/fulls/reviewer_cover.png" alt="" /></a>
 								<h3><a href="https://drive.google.com/file/d/1cZ19czoQYYd-7SfY8q63Gv8NtOU-1f3P/view?usp=sharing">Reviewer in Advances in Science, Technology and Engineering Systems Journal (ASTESJ)</a></h3>
 								<p>Current Reviewer of ASTES Journal, reviewed one manuscript</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/LQ certificate.JPG" class="image fit thumb"><img src="images/fulls/cover lq.png" alt="" /></a>
+								<a href="images/fulls/LQ certificate.jpg" class="image fit thumb"><img src="images/fulls/lq cover.png" alt="" /></a>
 								<h3><a href="https://www.linkedin.com/posts/landquire_lqstaffhighlights-investmentopportunity-dreamteam-activity-6813133586317881345-szua?utm_source=share&utm_medium=member_desktop">Senior Manager of Data Management Department</a></h3>
-								<p>Led the Data Management Team in LandQuire. Was responsible for managing and analysing real estate property data on daily basis.</p>
+								<p>Leading the Data Management Team in LandQuire. My responsibility includes managing and analysing real estate property data, using Mixed Integer Linear Programming (MILP) models for profit optimization, constructing Monte Carlo Simulations to evaluate the return and risk of investments, and managing the ETL pipeline daily.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/epy in.PNG" class="image fit thumb"><img src="images/fulls/epy cover.png" alt="" /></a>
+								<a href="images/fulls/epy in.png" class="image fit thumb"><img src="images/fulls/epy cover.png" alt="" /></a>
 								<h3><a href="https://drive.google.com/file/d/1pKnLOWoF4ALhuf4af-YCrg9v3Jg84WDi/view?usp=sharing">Management Trainee-Executive of Industrial Engineering Department</a></h3>
 								<p>Former Management Trainee-Executive of Industrial Engineering Department of Epyllion Group</br>
 								Please <a href="images/fulls/epy respo.PNG">click here</a> to look at my responsibilities there.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/batb in.PNG" class="image fit thumb"><img src="images/fulls/cover batb.png" alt="" /></a>
+								<a href="images/fulls/batb in.png" class="image fit thumb"><img src="images/fulls/cover batb.png" alt="" /></a>
 								<h3><a href="https://drive.google.com/file/d/1TTZMF7_rk7M_s1Nl86_G8p4sOBDXCofG/view?usp=sharing">Your Voice Facilitator of Primary Manufacturing Department</a></h3>
 								<h3></h3>
 								<p>Worked in a project in British American Tobacco Bangladesh (BATB) as Your Voice Facilitator. Project of consits of Work Force Management through gathering field data.</p>
@@ -141,14 +140,19 @@
 								<a href="images/fulls/COATS Internship.jpg" class="image fit thumb"><img src="images/fulls/coats cover.png" alt="" /></a>
 								<h3><a href="https://drive.google.com/file/d/1ehdyHA9qsUdhyHHjC3BcgQsh2M28koYK/view?usp=sharing">Intern of Industrial Engineering Department</a></h3>
 								<p>Former Intern of Industrial Engineering Department of COATS Bangladesh. Completed Ungraduate Internship there.</br>
-									Please <a href="images/fulls/coats respo.PNG">click here</a> to look at my responsibilities there.</p></p>
+									Please <a href="images/fulls/coats respo.png">click here</a> to look at my responsibilities there.</p></p>
 							</article>
 						</div>
 					</section>
-					<hr>
+
 					<section id = 'four'>
 						<h2><b>Projects</b></h2>
 						<div class="row">
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/ask youtube in.png" class="image fit thumb"><img src="images/fulls/ask youtube cover.png" alt="" /></a>
+								<h3><a href="https://ask-youtube.streamlit.app/">An AI Chatbot for Interactive YouTube Video Queries</a></h3>
+								<p>Please <a href="https://github.com/KaziArman/ask-youtube">click here</a> to go through the code & click on the title to use the <a href="https://ask-youtube.streamlit.app/">chat bot</a>.</p>
+							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/dash app cover.png" class="image fit thumb"><img src="images/fulls/dash app cover.png" alt="" /></a>
 								<h3><a href="https://kazi-bayout.herokuapp.com/">Realtime data Visualization from a real estate website using Dash</a></h3>
@@ -190,7 +194,7 @@
 							</article>
 						</div>
 					</section>
-					<hr>
+
 					<section id="five">
 						<h2><b>Certifications</b></h2>
 						<div class="row">
@@ -297,15 +301,22 @@
 							</article>
 						</div>
 					</section>
-						<hr>
+
 						<section id="six">
 							<h2><b>Achievements</b></h2>
+
 							<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/ptak.PNG" class="image fit thumb"><img src="images/fulls/ptak cover.png" alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/12x3i1zHlmgDuPxL8tlP5CIfFZtklokP_/view?usp=sharing">Ptak Prize Scholarship Winner</a></h3>
-								<p>Scholarship Winner at Ptak Prize 2018, a reputed international competition organized by International Supply Chain Education Alliance (ISCEA).</p>
-							</article>
+								<article class="col-6 col-12-xsmall work-item">
+									<a href="images/fulls/LQ certificate.jpg" class="image fit thumb"><img src="images/fulls/cover lq.png" alt="" /></a>
+									<h3><a href="images/fulls/LQ certificate.jpg">Certificate of Excellence</a></h3>
+									<p>Got recognition as the outstanding employee for the fiscal year 2022.</p>
+								</article>
+
+								<article class="col-6 col-12-xsmall work-item">
+									<a href="images/fulls/ptak.PNG" class="image fit thumb"><img src="images/fulls/ptak cover.png" alt="" /></a>
+									<h3><a href="https://drive.google.com/file/d/12x3i1zHlmgDuPxL8tlP5CIfFZtklokP_/view?usp=sharing">Ptak Prize Scholarship Winner</a></h3>
+									<p>Scholarship Winner at Ptak Prize 2018, a reputed international competition organized by International Supply Chain Education Alliance (ISCEA).</p>
+								</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/nrf.png" class="image fit thumb"><img src="images/fulls/robot cover.png" alt="" /></a>
 								<h3><a href="https://drive.google.com/file/d/1_-B5WbwOlgoa2vJEiahg0vYAa2gMY0Il/view?usp=sharing">1st Runner Up in "Design & Simulation" at "National Robotic Festival 2017"</a></h3>
@@ -346,7 +357,7 @@
 							</article>
 						</div>
 					</section>
-					<hr>
+
 					<section id="seven">
 						<h2><b>Extra Curricular Activities</b></h2>
 						<div class="row">
