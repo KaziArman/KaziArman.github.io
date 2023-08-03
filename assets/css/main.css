@@ -52,6 +52,21 @@ h2 a {
 
 }
 
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 18px;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#topBtn:hover {
+  background-color: #555; /* Add hover effect */
+}
+
 body {
 	line-height: 1;
 }
