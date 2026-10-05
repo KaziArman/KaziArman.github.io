@@ -1,556 +1,753 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Kazi Arman Ahmed</title>
+<meta name="description" content="Kazi Arman Ahmed, graduate researcher in decentralized, privacy-preserving optimization and agentic AI for energy and healthcare, Oklahoma State University." />
+<meta name="theme-color" content="#F7F9EF" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%90%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap" />
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" />
+<style>
+/* Palette and type adapted from the CC0 "minimal-light" family. */
+:root {
+  --paper: #F7F9EF; --paper-deep: #EFF3E1; --card: #FCFDF7;
+  --ink: #101619; --ink-2: #2A343A; --muted: #5F6960;
+  --rule: #DCE2CE; --rule-soft: #E9EDDF; --rule-strong: #C2CBAE;
+  --accent: #185C96; --accent-ink: #10426B; --accent-soft: #E3EDF7; --mark: #D8E8F5;
+  --shade: rgba(16,22,25,.11);
+  --shadow: 0 1px 2px rgba(16,22,25,.05), 0 8px 24px -18px rgba(16,22,25,.32);
+  --serif: "Newsreader", "Iowan Old Style", Palatino, Georgia, serif;
+  --sans: "Switzer", "Avenir Next", "Segoe UI", Helvetica, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --measure: 66ch; --rail: 21.5rem; --avatar: 128px;
+  --gap: clamp(2rem, 4.4vw, 4.25rem); --pad: clamp(1.25rem, 4.5vw, 3rem); --radius: 3px;
+  color-scheme: light;
+}
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--serif); font-size: 1rem; line-height: 1.6;
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+}
+a { color: var(--accent); text-decoration: none; }
+::selection { background: var(--mark); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.skip { position: absolute; left: 1rem; top: -4rem; z-index: 60; background: var(--accent); color: #fff; padding: .6rem 1rem; border-radius: var(--radius); transition: top .15s ease; }
+.skip:focus { top: 1rem; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
 
-<html>
-	<head>
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-9F4KN5X590"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+/* shell */
+.shell {
+  max-width: 78rem; margin: 0 auto;
+  padding: clamp(2rem,5vw,3.5rem) max(var(--pad), env(safe-area-inset-left)) 0 max(var(--pad), env(safe-area-inset-right));
+  padding-top: calc(clamp(2rem,5vw,3.5rem) + env(safe-area-inset-top));
+  display: grid; grid-template-columns: var(--rail) minmax(0,1fr); gap: 0 var(--gap); align-items: start;
+}
 
-		  gtag('config', 'G-9F4KN5X590');
-		</script>
-		<title>Portfolio of Kazi Arman Ahmed</title>
-		<link rel="icon" type="image/png" href="images/r3.png">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css"/>
-	</head>
-	<body class="is-preload">
-		<!-- Nav -->
-			<nav id="nav2">
-				<ul class="container">
-					<li><a href="#two" >Research Works & Publications</a></li>
-					<li><a href="#three">Work Experiences</a></li>
-					<li><a href="#four">Projects</a></li>
-					<li><a href="#five">Certifications</a></li>
-					<li><a href="#six">Achievements</a></li>
-					<li><a href="#seven">Extra Curricular Activities</a></li>
-					<li><a href="#eight">Contact</a></li>
-				</ul>
-			</nav>
-		<header id="header">
-				<div class="inner">
-					<a href="https://drive.google.com/file/d/1pRVsJTV6EnJiwLccPbS8Xh4KuocvXHzK/view?usp=sharing" class="image avatar"><img src="images/fulls/Rahat Smile Pic.PNG"  alt="" /></a> <!-- src="images/rahatpp.jpg"-->
-					<h1 style="color:rgb(215, 225, 228);"><strong>I am Kazi Arman Ahmed</strong>, a Graduate Research Assistant and dual Master’s student in Industrial Engineering Management and Business Analytics & Data Science, passionate about data-driven decision-making and impactful research.<br />
+/* rail */
+.rail {
+  position: sticky; top: clamp(1.25rem,3vw,2.25rem);
+  display: flex; flex-direction: column; gap: 1.5rem;
+  padding-bottom: 3rem; max-height: calc(100vh - 3rem); overflow-y: auto; scrollbar-width: thin;
+}
+.ident { display: flex; flex-direction: column; align-items: center; text-align: center; gap: .9rem; }
+.avatar { flex: 0 0 auto; width: var(--avatar); height: var(--avatar); border-radius: 50%; overflow: hidden;
+  display: grid; place-items: center; background: var(--accent-soft); border: 1px solid var(--rule); }
+.avatar img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 50%; background: #fff; border-radius: 50%; }
+.avatar .mono { font-family: var(--serif); font-size: 2.7rem; font-weight: 500; color: var(--accent); }
+.ident__name { font-size: 1.625rem; font-weight: 500; letter-spacing: -0.022em; margin: 0 0 .5rem; }
+.ident__role { font-family: var(--sans); font-size: .8125rem; line-height: 1.65; color: var(--muted); margin: 0; }
+.ident__role b { font-weight: 500; color: var(--ink-2); display: block; margin-bottom: .18rem; }
+.ident__mail { font-family: var(--sans); font-size: .8125rem; margin: .35rem 0 0; }
+.ident__mail a { color: var(--ink-2); border-bottom: 1px solid var(--rule); padding-bottom: 1px; }
+.ident__mail a:hover { color: var(--accent); border-color: var(--accent); }
 
-					</h1> <!--Engineering Graduate, looking for the opportunity of<br />
-					Higher Studies -->
-				</div>
-			</header>
-        
-		<!-- Main -->
-			<article id="main">
+.contact { display: flex; justify-content: center; align-items: center; gap: 1.25rem; margin-top: -.15rem; }
+.contact a { display: inline-flex; color: var(--ink-2); transition: transform .16s ease; }
+.contact a:hover { transform: translateY(-1px); }
+.contact svg { width: 22px; height: 22px; stroke: var(--ink-2); fill: none; stroke-width: 1.5; transition: stroke .16s ease, fill .16s ease; }
+.contact svg.ic-fill { fill: var(--ink-2); stroke: none; }
+.contact a:hover svg { stroke: var(--accent); }
+.contact a:hover svg.ic-fill { fill: var(--accent); stroke: none; }
 
-				<!-- One -->
-					<section id="one">
+/* nav + scroll-spy active state */
+.nav { position: relative; display: flex; flex-direction: column; border-top: 1px solid var(--rule); }
+.nav a {
+  display: flex; align-items: baseline; gap: .7rem; padding: .62rem 0 .62rem .95rem;
+  border-bottom: 1px solid var(--rule-soft); font-family: var(--sans); font-size: .9375rem;
+  color: var(--ink-2); position: relative;
+  transition: color .16s ease, padding-left .16s ease, background-color .16s ease, box-shadow .16s ease;
+}
+.nav a::before {
+  content: ""; position: absolute; left: 0; top: 50%; width: 5px; height: 5px; margin-top: -2.5px;
+  background: var(--accent); opacity: 0; transform: scale(.4); transition: opacity .16s ease, transform .16s ease;
+}
+.nav a:hover { color: var(--ink); padding-left: 1.15rem; }
+.nav a.active {
+  color: var(--ink); font-weight: 600; background: var(--card);
+  border-radius: 6px; box-shadow: var(--shadow); padding-left: 1.15rem;
+}
+.nav a.active::before { opacity: 1; transform: scale(1); left: .35rem; }
+.nav__count { margin-left: auto; font-family: var(--mono); font-size: .6875rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 
-						<center><p style="font-family: 'Brush Script MT', cursive;color:#006666;font-size: 20.5px;">"The important thing is not to stop questioning. Curiosity has its own reason for existing."</p></center>
+/* content */
+.content { min-width: 0; padding-bottom: 4rem; }
+.view { scroll-margin-top: 1.5rem; }
+.view__head { margin-bottom: 1.6rem; }
+.view__title { font-size: clamp(1.75rem,3.6vw,2.35rem); font-weight: 400; letter-spacing: -0.022em; margin: .35rem 0 .55rem; }
+.view__lede { font-size: 1.0625rem; line-height: 1.62; color: var(--ink-2); max-width: var(--measure); margin: 0; }
 
+.block { margin-top: 3rem; scroll-margin-top: 1.5rem; }
+.block__head { display: flex; align-items: baseline; gap: 1rem; padding-bottom: .7rem; border-bottom: 2px solid var(--rule-strong); margin-bottom: 1.5rem; }
+.block__title { font-size: 1.4rem; font-weight: 500; letter-spacing: -0.01em; margin: 0; }
+.block__more { margin-left: auto; font-family: var(--sans); font-size: .8125rem; color: var(--muted); }
+.prose { max-width: var(--measure); font-size: 1.0625rem; line-height: 1.72; margin: 0; }
+.prose + .prose { margin-top: 1rem; }
+.subh { font-family: var(--sans); font-size: .95rem; font-weight: 600; color: var(--ink); margin: 1.4rem 0 .3rem; }
 
-						<p style="text-align: justify;">Hi, I am Kazi Arman Ahmed. I am currently pursuing dual Master’s degrees at Oklahoma State University. 
-							As a Graduate Research Assistant, I work with large-scale healthcare datasets to uncover disease trajectories and support data-driven healthcare interventions. 
-							I also bring 3+ years of industry experience as a Senior Data Analyst, where I automated workflows and developed real-time dashboards to drive strategic decisions.
-							I have maintained a perfect 4.00 GPA in my graduate studies while co-authoring peer-reviewed research and contributing to academic symposia.
-							My passion lies in optimization, machine learning, and human-centered analytics—using data to solve complex problems in healthcare, manufacturing, and supply chain systems. 
-							I thrive on curiosity, impact, and collaboration. Let’s connect!</p>
-						<!-- <h2><b>Research Interests</b></h2>
-						<ul class="actions">
-							<ul><li>Applied Statistics  &nbsp;&nbsp;</li><li>Advanced Manufacturing Processes  &nbsp;&nbsp;</li><li>Mechanical Fatigue and Fracture Analysis</li></ul>
-							<ul><li>Systems Engineering  &nbsp;&nbsp;</li><li>Data Analytics and Machine Learning  &nbsp;&nbsp;</li><li>Modeling and Simulation</li></ul>
-							<ul><li>Operations Research Applications  &nbsp;&nbsp;</li><li>Manufacturing System Design and Optimization &nbsp;&nbsp;</li><li>Decision Making Under Uncertainty</li></ul>
+/* news */
+.newswrap { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 0 1.35rem; align-items: stretch; }
+.newsscroll {
+  position: relative; min-width: 0; max-height: clamp(12rem,30vh,16rem); overflow-y: auto;
+  padding-right: .6rem; scrollbar-width: thin; scrollbar-color: var(--rule) transparent;
+  background-image:
+    linear-gradient(to bottom, var(--paper), transparent),
+    linear-gradient(to top, var(--paper), transparent),
+    linear-gradient(to bottom, color-mix(in srgb, var(--shade) 70%, transparent), transparent),
+    linear-gradient(to top, color-mix(in srgb, var(--shade) 70%, transparent), transparent);
+  background-position: top center, bottom center, top center, bottom center;
+  background-repeat: no-repeat; background-size: 100% 26px, 100% 26px, 100% 18px, 100% 18px;
+  background-attachment: local, local, scroll, scroll;
+}
+.newsscroll::-webkit-scrollbar { width: 6px; }
+.newsscroll::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 3px; }
+.news { list-style: none; margin: 0; padding: 0; }
+.news > li { display: grid; grid-template-columns: 6.5rem minmax(0,1fr); gap: 0 1.25rem; padding: .68rem 0; border-bottom: 1px solid var(--rule-soft); }
+.news > li:last-child { border-bottom: 0; }
+.news__date { font-family: var(--mono); font-size: .75rem; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: .22rem; white-space: nowrap; }
+.news__txt { font-size: .9688rem; line-height: 1.55; max-width: 58ch; }
+.news__txt a, .inline-link { color: var(--accent-ink); border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); white-space: nowrap; }
+.news__txt a:hover, .inline-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
-						</ul> -->
-						<ul class="actions">
-							<li><a href="" class="button">Curriculum Vitae (CV)</a></li>
-							<li><a href="https://drive.google.com/file/d/14dqG61qPyQzqA6Ijwleolmw27TzEjKLo/view?usp=sharing" class="button">Bachelor's Certificates</a></li>
-							<li><a href="https://drive.google.com/file/d/1u8OJLqPrFKS_CqLLJhDoqk6WNxa7kFch/view?usp=sharing" class="button">Some Pictures of Mine</a></li>
-						</ul>
-					</section>
+.years { align-self: stretch; display: flex; flex-direction: column; justify-content: space-between; gap: .35rem; min-width: 4.5rem; border-left: 1px solid var(--rule); padding: .2rem 0 .2rem 1.05rem; }
+.year { position: relative; appearance: none; background: none; border: 0; cursor: pointer; display: flex; align-items: baseline; gap: .45rem; padding: .25rem 0; font-family: var(--mono); font-size: .75rem; letter-spacing: .03em; font-variant-numeric: tabular-nums; color: var(--muted); text-align: left; transition: color .18s ease; }
+.year::before { content: ""; position: absolute; left: -1.05rem; top: 50%; width: 7px; height: 1px; margin-top: -.5px; background: var(--rule); transition: width .18s ease, height .18s ease, background-color .18s ease; }
+.year:hover { color: var(--ink-2); }
+.year:hover::before { width: 11px; background: var(--muted); }
+.year[aria-current] { color: var(--ink); font-weight: 500; }
+.year[aria-current]::before { width: 15px; height: 2px; margin-top: -1px; background: var(--accent); }
+.year__n { font-size: .625rem; color: var(--muted); opacity: .8; }
+.year[aria-current] .year__n { color: var(--accent); opacity: 1; }
 
-				<!-- Two -->
-					<section id="two">
-						<b style="color: black;font-weight: bold;font-size: 14px;">  ( </b><b style="color: green;font-weight: bold;font-size: 14px;">Published </b><b style="color: black;font-size: 14px;">: 5, </b><b style="color: #007F7F;font-weight: bold;font-size: 14px;">Accepted </b><b style="color: black;font-size: 14px;">: N/A, </b><b style="color: red;font-weight: bold;font-size: 14px;">Under Review </b><b style="color: black;font-size: 14px;">: 2 </b><b style="color: black;font-weight: bold;font-size: 14px;">  )</b>
-						<h2 style="color:rgb(10, 1, 1);"><b>Research Works & Publications  </b><a class="actions" href="">   Ongoing Research</a></h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/SLS Abstract.png" class="image fit thumb"><img src="images/fulls/sls cover.png" alt="" /></a>
-								<h3><a href="https://www.mdpi.com/2504-4494/7/4/144">Optimization of Selective Laser Sintering (SLS) 3D Printing of Thermoplastic Polyurethane Elastomer: A Statistical Approach</a><p><b style="color: #007F7F;font-weight: bold;">Published </b>in <b style="color: black;font-weight: bold;">Journal of Manufacturing and Materials Processing</b></p></h3><a href="https://www.scimagojr.com/journalsearch.php?q=21100977478&amp;tip=sid&amp;exact=no" ><img border="0" src="https://www.scimagojr.com/journal_img.php?id=21100977478" width="90" height="60" alt="SCImago Journal &amp; Country Rank"  /></a>
-								<p>This research seeks to optimize selective laser sintering process parameters for TPU powder to achieve high-quality 3D printed parts. This involves determining ideal settings for layer thickness and laser power through modeling, experimentation, and mechanical fatigue and fracture analysis to ensure durability under real-world conditions.</br></p>
-							</article>
+/* publications */
+.pubs { display: flex; flex-direction: column; }
+.yeargroup + .yeargroup { margin-top: 2.25rem; }
+.yeargroup__h { font-family: var(--mono); font-size: .75rem; letter-spacing: .12em; color: var(--muted); font-weight: 500; padding-bottom: .5rem; border-bottom: 1px solid var(--rule); margin: 0 0 .35rem; display: flex; align-items: baseline; gap: .75rem; text-transform: uppercase; }
+.yeargroup__n { margin-left: auto; opacity: .7; }
+.pub { padding: 1.1rem 0; border-bottom: 1px solid var(--rule-soft); }
+.pub:last-child { border-bottom: 0; }
+.pub__title { font-size: 1.0625rem; font-weight: 500; line-height: 1.34; color: var(--ink); }
+.pub__title a { color: var(--ink); }
+.pub__title a:hover { color: var(--accent); }
+.pub__authors { font-family: var(--sans); font-size: .8438rem; color: var(--muted); line-height: 1.5; margin-top: .3rem; }
+.me { color: var(--ink); font-weight: 600; border-bottom: 1.5px solid var(--accent); padding-bottom: .5px; }
+.pub__venue { font-size: .9375rem; color: var(--ink-2); font-style: italic; margin-top: .15rem; }
+.flag { display: inline-block; font-family: var(--sans); font-style: normal; font-size: .68rem; letter-spacing: .04em; text-transform: uppercase; color: var(--accent-ink); background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--rule)); border-radius: 4px; padding: .04rem .4rem; margin-right: .5rem; vertical-align: .12em; }
+.pub__links { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .5rem; align-items: center; }
+.pill { font-family: var(--sans); font-size: .75rem; color: var(--muted); border: 1px solid var(--rule); border-radius: 999px; padding: .15rem .6rem .2rem; }
+.pill:hover { color: var(--accent-ink); border-color: var(--accent); background: var(--accent-soft); }
+.cited { display: none; font-family: var(--sans); font-size: .72rem; color: var(--muted); border: 1px solid var(--rule); border-radius: 999px; padding: .12rem .55rem; }
+.cited.on { display: inline-block; }
+.cited a { color: var(--muted); }
+.cited a:hover { color: var(--accent); }
 
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/topsis in.png" class="image fit thumb"><img src="images/fulls/topsis cover.png"  alt="" /></a>
-								<h3><a href="https://link.springer.com/article/10.1007/s41870-023-01397-2">Comparative Analysis of KNN and SVM in Multicriteria Inventory Classification Using TOPSIS</a><p><b style="color: #007F7F;font-weight: bold;">Published </b>in <b style="color: black;font-weight: bold;">International Journal of Information Technology</b></p></h3><a href="https://www.scimagojr.com/journalsearch.php?q=21101022413&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank"><img border="0" src="https://www.scimagojr.com/journal_img.php?id=21101022413"width="90" height="60" alt="SCImago Journal &amp; Country Rank"  /></a>
-								<p>This research compares ML models to identify the optimal model for rapidly classifying new inventory in a multicriteria ABC system. By leveraging an initial TOPSIS analysis and evaluating SVM and KNN accuracy in predicting classes for new items, the goal is to find the most accurate model which will enable efficient categorization of newly added items based on multiple properties, avoiding disruption in competitive environments.</p> 
-							</article>
+/* definition lists (experience / education / honors) */
+.deflist { display: grid; grid-template-columns: 8.5rem minmax(0,1fr); gap: 0; }
+.deflist > dt { font-family: var(--mono); font-size: .6875rem; letter-spacing: .06em; color: var(--muted); padding: .8rem 0; border-top: 1px solid var(--rule-soft); font-variant-numeric: tabular-nums; text-transform: uppercase; }
+.deflist > dd { margin: 0; padding: .8rem 0; border-top: 1px solid var(--rule-soft); font-size: .9375rem; line-height: 1.55; }
+.deflist > dd b { font-weight: 600; color: var(--ink); }
+.deflist > dd span { display: block; font-family: var(--sans); font-size: .8125rem; color: var(--muted); margin-top: .12rem; }
+.deflist > dt:first-of-type, .deflist > dd:first-of-type { border-top: 0; }
 
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/breast abstract.png" class="image fit thumb"><img src="images/fulls/breast cover.png" alt="" /></a>
-								<h3><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0326221">Advancing Breast Cancer Prediction: Comparative Analysis of ML models and DL-Based Multi-Model Ensembles on Original and Synthetic Datasets</a><p><b style="color: #007F7F;font-weight: bold;">Published </b>in <b style="color: black;font-weight: bold;">PLOS One</b></p></h3><a href="https://www.scimagojr.com/journalsearch.php?q=10600153309&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank"><img border="0" src="https://www.scimagojr.com/journal_img.php?id=10600153309"width="90" height="60" alt="SCImago Journal &amp; Country Rank"  /></a>
-								<p>This research aims to enhance breast cancer diagnosis through a comparative evaluation of various machine learning and deep learning techniques using both original and synthetic datasets. The goal is to identify an optimal approach or combination of approaches that can improve prediction accuracy and contribute to the advancement of breast cancer diagnosis.</p>
-							</article>
-							
-							<article class="col-6 col-12-xsmall work-item" id =ttwoo>
-								<a href="images/fulls/fuzzy abstract.png" class="image fit thumb"><img src="images/fulls/fuzzy cover.png" alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/1CzFUF5eDlxzay_l1lMf730dMzI-n9mkI/view?usp=sharing">Supplier selection using machine learning integrated fuzzy AHP and Bayesian Belief Network approach: Case study of a jute company</a><p><b style="color: red;font-weight: bold;">Under Review </b>in <b style="color: black;font-weight: bold;">Expert Systems With Applications</b></p></h3><a href="https://www.scimagojr.com/journalsearch.php?q=24201&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank"><img border="0" src="https://www.scimagojr.com/journal_img.php?id=24201" width="90" height="60" alt="SCImago Journal &amp; Country Rank"  /></a>
-								<p>This research seeks to optimize jute yarn supplier selection for a Bangladeshi company by integrating fuzzy AHP, Bayesian belief networks, and machine learning techniques. The goal is to develop an accurate data-driven model for weighing criteria, assessing supplier performance, analyzing risks, and identifying ideal suppliers to improve procurement decisions.</p>
-							</article>
+.ack .prose b { font-weight: 600; color: var(--ink); }
+.todo { color: var(--muted); font-style: italic; }
+.btn { cursor: pointer; font-family: var(--sans); font-size: .875rem; font-weight: 500; color: var(--card); background: var(--accent); border: 1px solid var(--accent); border-radius: var(--radius); padding: .55rem 1rem; display: inline-flex; align-items: center; gap: .5rem; }
+.btn:hover { opacity: .9; }
 
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/heart abstract.png" class="image fit thumb"><img src="images/fulls/heart cover.png" alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/1KwQ_9pYDZhtZVEpEOf6sntnKAugpymbR/view?usp=sharing">Machine learning-based models for cardiovascular disease prediction</a><p><b style="color: red;font-weight: bold;">Under Review </b>in <b style="color: black;font-weight: bold;">Informatics in Medicine Unlocked</b></p></h3><a href="https://www.scimagojr.com/journalsearch.php?q=4700152237&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank"><img border="0" width="90" height="60" src="https://www.scimagojr.com/journal_img.php?id=4700152237" alt="SCImago Journal &amp; Country Rank"  /></a>
-								<p>This research seeks to identify the optimal machine learning model for accurately diagnosing cardiovascular disease early and conduct risk analysis using Bayesian belief networks on the optimal model. By determining the highest-performing ML approach, the aim is to develop an effective disease prediction system that improves clinical decision-making and patient outcomes through early detection and intervention.</p>
-							</article>
+/* footer */
+.foot { border-top: 1px solid var(--rule); background: var(--paper-deep); margin-top: 2rem; }
+.foot__in { max-width: 78rem; margin: 0 auto; padding: 1.5rem var(--pad) calc(2.25rem + env(safe-area-inset-bottom)); display: flex; flex-wrap: wrap; gap: .6rem 2rem; align-items: baseline; }
+.foot__txt { font-family: var(--sans); font-size: .8125rem; line-height: 1.6; color: var(--muted); max-width: 62ch; margin: 0; }
+.foot__stamp { margin-left: auto; font-family: var(--mono); font-size: .6875rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); opacity: .8; }
 
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/Email Stick.png" class="image fit thumb"><img src="images/fulls/cover_stick.png" alt="" /></a>
-								<h3><a href="https://link.springer.com/chapter/10.1007/978-3-030-24322-7_7">Development of an Inexpensive Proficient Smart Walking Stick for Visually Impaired People</a><p><b style="color: #007F7F;font-weight: bold;">Published </b>in <b style="color: black;font-weight: bold;">Advances in Decision Sciences, Image Processing, Security and Computer Vision</b></p></h3>
-								<p>This research represents a medical engineering technology to develop an extremely low cost smart walking stick as assistance for visually impaired people. <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C6KttPcAAAAJ&citation_for_view=C6KttPcAAAAJ:u5HHmVD_uO8C">click here</a></br>
-								   It has been published in <b style="font-weight: bold;">Springer</b> and till now received <b>5 citations</b></p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/Email Safety.png" class="image fit thumb"><img src="images/fulls/cover_safety.png" alt="" /></a>
-								<h3><a href="https://www.astesj.com/v06/i02/p96/#1477470858207-d194995f-690d">Design And Development Of An Advanced Affordable Wearable Safety Device For Women: Freedom Against Fearsome</a><p><b style="color: #007F7F;font-weight: bold;">Published </b>in <b style="color: black;font-weight: bold;">Advances in Science, Technology and Engineering Systems Journal</b></p></h3>
-								<p>This research develops voice-activated safety jewelry for women using GPS and alerts to improve personal security. The goal is integrating discreet electronics into daily accessories for accessible and effective emergency response. <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C6KttPcAAAAJ&citation_for_view=C6KttPcAAAAJ:9yKSN-GCB0IC">click here</a></p>
-							</article>
-							
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/rice transplanter.png" class="image fit thumb"><img src="images/fulls/cover_rice.png" alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/1khBGTxV5KCyTG64wXC0dLqnW30xA7kbD/view?usp=sharing">Design And Fabrication Of A Manual Rice Transplanter</a></h3>
-								<p><b>Undergraduate Product Design Research Project</b> about designing a prototype of Manual Rice Transplanter in CAD software then fabricating the prototype in real life.</p>
-							</article>
-						</div>
-					</section>
+/* research themes */
+.rstate { font-size: 1.2rem; line-height: 1.65; color: var(--ink); max-width: var(--measure); margin: 0 0 2.4rem; }
+.rstate em { color: var(--accent-ink); }
+.rail-quote { margin: .3rem 0 0; padding: 0 .4rem 0 .95rem; font-size: .95rem; font-style: italic; line-height: 1.55; color: var(--muted); }
+.rail-quote cite { display: block; margin-top: .35rem; font-family: var(--sans); font-size: .72rem; font-style: normal; letter-spacing: .04em; color: var(--muted); }
+@media (min-width: 60.01rem) { .epigraph--mobile { display: none; } }
+@media (max-width: 60rem) { .rail-quote { display: none; } }
+.epigraph { margin: 2rem 0 0; padding: 1.1rem 0 0; border-top: 1px solid var(--rule-soft); font-size: 1.05rem; font-style: italic; line-height: 1.55; color: var(--muted); max-width: 52ch; }
+.epigraph cite { display: block; margin-top: .3rem; font-family: var(--sans); font-size: .76rem; font-style: normal; letter-spacing: .04em; color: var(--muted); }
+.prose a.inl { color: var(--accent-ink); border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); }
+.prose a.inl:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.themes { display: flex; flex-direction: column; gap: 2.4rem; }
+.theme { display: grid; grid-template-columns: 3rem minmax(0,1fr); gap: 0 1.1rem; }
+.theme__num { font-family: var(--mono); font-size: .8rem; letter-spacing: .08em; color: var(--accent); padding-top: .4rem; border-top: 2px solid var(--accent); align-self: start; }
+.theme__head { display: flex; align-items: baseline; flex-wrap: wrap; gap: .4rem .7rem; margin: 0 0 .45rem; }
+.theme__title { font-size: 1.3rem; font-weight: 500; line-height: 1.3; letter-spacing: -0.01em; margin: 0; color: var(--ink); }
+.theme__lede { font-size: 1.02rem; line-height: 1.65; color: var(--ink-2); margin: 0 0 1.1rem; max-width: var(--measure); }
+.steps { list-style: none; margin: 0 0 1rem; padding: 0; }
+.steps li { position: relative; padding: 0 0 1.05rem 1.7rem; }
+.steps li::before { content: ""; position: absolute; left: .25rem; top: .38rem; width: 11px; height: 11px; border-radius: 50%; background: var(--paper); border: 2px solid var(--accent); }
+.steps li::after { content: ""; position: absolute; left: calc(.25rem + 4.5px); top: 1.15rem; bottom: .05rem; width: 2px; background: var(--rule-strong); }
+.steps li:last-child { padding-bottom: 0; }
+.steps li:last-child::after { display: none; }
+.step__k { display: block; font-family: var(--sans); font-size: .72rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--accent-ink); margin-bottom: .18rem; }
+.steps p { margin: 0; font-size: .99rem; line-height: 1.62; color: var(--ink); max-width: var(--measure); }
+.theme__meta { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; margin-top: 1rem; }
+.tag { font-family: var(--sans); font-size: .72rem; color: var(--muted); border: 1px solid var(--rule); border-radius: 999px; padding: .12rem .6rem; background: var(--card); }
+.theme__link { font-family: var(--sans); font-size: .8rem; margin-left: .3rem; }
+.theme__link:hover { text-decoration: underline; text-underline-offset: 2px; }
+.status { font-family: var(--sans); font-size: .68rem; font-weight: 500; border-radius: 999px; padding: .12rem .55rem; border: 1px solid; white-space: nowrap; }
+.status--wip { color: #7a5412; background: #F6EDD9; border-color: #e3cfa4; }
+.ricon { width: 34px; height: 34px; border-radius: 8px; background: var(--accent-soft); display: grid; place-items: center; flex: none; }
+.ricon svg { width: 19px; height: 19px; stroke: var(--accent); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.rsub { font-family: var(--mono); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 2.4rem 0 .7rem; }
+.rmini { display: flex; gap: .8rem; align-items: flex-start; padding: .9rem 1rem; border: 1px solid var(--rule-soft); border-radius: 8px; background: color-mix(in srgb, var(--card) 60%, var(--paper)); max-width: var(--measure); }
+.rmini h4 { font-family: var(--sans); font-size: .9rem; font-weight: 600; margin: .1rem 0 .2rem; color: var(--ink); }
+.rmini p { font-size: .92rem; line-height: 1.5; color: var(--ink-2); margin: 0; }
+.viewall { margin-top: 1.2rem; appearance: none; cursor: pointer; font-family: var(--sans); font-size: .85rem; font-weight: 500; color: var(--accent-ink); background: var(--card); border: 1px solid var(--rule); border-radius: 999px; padding: .5rem 1.1rem; transition: border-color .16s ease, background-color .16s ease; }
+.viewall:hover { border-color: var(--accent); background: var(--accent-soft); }
+.pubs__older { margin-top: 2.25rem; display: flex; flex-direction: column; }
+@media (max-width: 34rem) { .theme { grid-template-columns: minmax(0,1fr); } .theme__num { width: 2.4rem; margin-bottom: .6rem; } }
 
-					<section id = 'three'>
-						<h2 style="color:rgb(10, 1, 1);"><b>Work Experiences</b></h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/GRA.png" class="image fit thumb"><img src="images/fulls/GRA_cover.png" alt="" /></a>
-								<h3><a href="">Graduate Research Assistant, IEM Department</a></h3>
-								<p>As a Graduate Research Assistant, I analyze 10M+ patient records from Oracle Real World Data to study Juvenile Idiopathic Arthritis, developing healthcare data pipelines and implementing trajectory modeling strategies.</p>
-							</article>
-							
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/GTA.png" class="image fit thumb"><img src="images/fulls/GTA_cover.png" alt="" /></a>
-								<h3><a href="">Graduate Teaching Assistant, IEM Department</a></h3>
-								<p>Served as a Graduate Teaching Assistant for ENGR 1412 at Oklahoma State University, leading Python and Excel labs, managing Canvas LMS for 60+ students, and earning ~95% positive feedback for instructional effectiveness.</p>
-							</article>
-							
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/LQ certificate.JPG" class="image fit thumb"><img src="images/fulls/lq cover.png" alt="" /></a>
-								<h3><a href="https://www.linkedin.com/posts/landquire_lqstaffhighlights-investmentopportunity-dreamteam-activity-6813133586317881345-szua?utm_source=share&utm_medium=member_desktop">Senior Manager of Data Management Department</a></h3>
-								<p>Leading the Data Management Team in LandQuire. My responsibility includes managing and analysing real estate property data, using Mixed Integer Linear Programming (MILP) models for profit optimization, constructing Monte Carlo Simulations to evaluate the return and risk of investments, and managing the ETL pipeline daily.</p>
-							</article>
-							
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/lecturer.PNG" class="image fit thumb"><img src="images/fulls/european_cover.png" alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/1EmxrWYJyULfIQinpQquASow7eBqq6-sY/view?usp=sharing">Lecturer of Industrial & Production Engineering Department</a></h3>
-								<p>Former Lecturer of Industrial & Production Engineering Department of European University, Bangladesh.</br>
-								Please <a href="images/fulls/lecturer.png">click here</a> to look at the courses that I have taken there.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/expert_in.png" class="image fit thumb"><img src="images/fulls/expert_cover.png" alt="" /></a>
-								<h3><a href="https://orcid.org/0000-0002-8224-9349">Reviewer in Expert Systems with Applications Journal (Q1, IF : 8.5)</a></h3>
-								<p>Current Reviewer, reviewed one manuscript (SOURCE-WORK-ID: c870d4b3-2489-4506-8a2e-14d3ba1cdb3b)</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/health_in.png" class="image fit thumb"><img src="images/fulls/health_cover.png" alt="" /></a>
-								<h3><a href="https://orcid.org/0000-0002-8224-9349">Reviewer in Healthcare Analytics Journal (CiteScore :- 1.9)</a></h3>
-								<p>Current Reviewer, reviewed one manuscript</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/reviewer in.PNG" class="image fit thumb"><img src="images/fulls/reviewer_cover.png" alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/1cZ19czoQYYd-7SfY8q63Gv8NtOU-1f3P/view?usp=sharing">Reviewer in Advances in Science, Technology and Engineering Systems Journal (ASTESJ)</a></h3>
-								<p>Current Reviewer of ASTES Journal, reviewed one manuscript</p>
-							</article>
+/* visitor map (Contact section) */
+.visitor-map { margin-top: 1.6rem; max-width: 340px; }
+.visitor-map img, .visitor-map canvas, .visitor-map iframe { max-width: 100%; height: auto; border-radius: 6px; }
 
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/epy in.PNG" class="image fit thumb"><img src="images/fulls/epy cover.png" alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/1pKnLOWoF4ALhuf4af-YCrg9v3Jg84WDi/view?usp=sharing">Management Trainee-Executive of Industrial Engineering Department</a></h3>
-								<p>Former Management Trainee-Executive of Industrial Engineering Department of Epyllion Group</br>
-								Please <a href="images/fulls/epy respo.PNG">click here</a> to look at my responsibilities there.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/batb in.PNG" class="image fit thumb"><img src="images/fulls/cover batb.png" alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/1TTZMF7_rk7M_s1Nl86_G8p4sOBDXCofG/view?usp=sharing">Your Voice Facilitator of Primary Manufacturing Department</a></h3>
-								<h3></h3>
-								<p>Worked in a project in British American Tobacco Bangladesh (BATB) as Your Voice Facilitator. Project of consits of Work Force Management through gathering field data.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/COATS Internship.jpg" class="image fit thumb"><img src="images/fulls/coats cover.png" alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/1ehdyHA9qsUdhyHHjC3BcgQsh2M28koYK/view?usp=sharing">Intern of Industrial Engineering Department</a></h3>
-								<p>Former Intern of Industrial Engineering Department of COATS Bangladesh. Completed Ungraduate Internship there.</br>
-									Please <a href="images/fulls/coats respo.png">click here</a> to look at my responsibilities there.</p></p>
-							</article>
-						</div>
-					</section>
+/* responsive */
+@media (max-width: 60rem) {
+  :root { --rail: 100%; }
+  .shell { grid-template-columns: minmax(0,1fr); gap: 2rem; }
+  .rail { position: static; max-height: none; overflow: visible; padding-bottom: 0; gap: 1.35rem; }
+  .nav { flex-direction: row; border-bottom: 1px solid var(--rule); overflow-x: auto; scrollbar-width: none; margin: 0 calc(var(--pad) * -1); padding: 0 var(--pad); }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a { padding: .75rem 0; margin-right: 1.4rem; border-bottom: 2px solid transparent; white-space: nowrap; }
+  .nav a:hover, .nav a.active { padding-left: 0; background: none; box-shadow: none; border-radius: 0; }
+  .nav a::before { display: none; }
+  .nav a.active { border-bottom-color: var(--accent); }
+  .nav__count { margin-left: .45rem; }
+}
+@media (max-width: 44rem) {
+  .newswrap { grid-template-columns: minmax(0,1fr); gap: 0; }
+  .newsscroll { max-height: none; overflow-y: visible; padding-right: 0; background-image: none; }
+  .years { order: -1; position: sticky; top: 0; z-index: 3; align-self: auto; flex-direction: row; justify-content: flex-start; gap: .35rem; min-width: 0; border-left: 0; border-bottom: 1px solid var(--rule); padding: .5rem 0; margin-bottom: .3rem; background: var(--paper); overflow-x: auto; scrollbar-width: none; }
+  .years::-webkit-scrollbar { display: none; }
+  .year { flex: 0 0 auto; padding: .28rem .65rem .32rem; border: 1px solid var(--rule); border-radius: 999px; background: var(--card); }
+  .year::before { display: none; }
+  .year[aria-current] { color: var(--accent-ink); border-color: var(--accent); background: var(--accent-soft); }
+}
+@media (max-width: 34rem) {
+  :root { --avatar: 96px; }
+  .pub, .news > li { grid-template-columns: minmax(0,1fr); gap: .2rem; }
+  .news__date { padding-top: 0; }
+  .deflist { grid-template-columns: minmax(0,1fr); }
+  .deflist > dt { padding-bottom: 0; }
+  .deflist > dd { padding-top: .28rem; border-top: 0; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-					<section id = 'four'>
-						<h2><b>Projects</b></h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/dc in.png" class="image fit thumb"><img src="images/fulls/dc cover.png" alt="" /></a>
-								<h3><a href="https://power-supply-optimization.streamlit.app/">Power Flow Optimization Web App </a></h3>
-								<p>Built an optimization web app reducing generation costs by 15% and visualizing real-time grid operations with auto-layout diagrams. Please <a href="https://github.com/KaziArman/Optimal-Power-Supply">click here</a> to go through the code & project details.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/scm in.png" class="image fit thumb"><img src="images/fulls/scm cover.png" alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/175h_FUjVQ34yDYdbbMmTLGujYDS_atAd/view?usp=sharing">Supply Chain Optimization for LLamaFresh Grocery Network</a></h3>
-								<p>Developed and optimized a regional distribution model using network design and scenario analysis, achieving an estimated weekly savings of $109K through fleet expansion and Saturday delivery optimization.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/OPTI.png" class="image fit thumb"><img src="images/fulls/OPTI_cover.png" alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/134_9PiRfgAI2cByFSKj6g3kPcdgfqmPb/view?usp=sharing">Optimized Work Scheduling for Employee Satisfaction</a></h3>
-								<p>Designed a MILP model that reduced scheduling conflict hours by 90% while achieving 100% shift coverage.Automated the scheduling process with scalable logic for dynamic labor environment. Please <a href="https://github.com/KaziArman/Optimized-Work-Scheduling-for-Employee-Satisfaction.git">click here</a> to go through the code & project details.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/SIMIO.png" class="image fit thumb"><img src="images/fulls/SIMIO.png" alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/1Nj9zpzSoEhhUQ4v8NdJhbEGM0N2cE8am/view?usp=sharing">SIMIO-Based Manufacturing Simulation</a></h3>
-								<p>Optimized workflow scheduling using simulation, reducing inefficiencies by 90% and ensuring 100% role coverage.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/ask youtube in.png" class="image fit thumb"><img src="images/fulls/ask youtube cover.png" alt="" /></a>
-								<h3><a href="https://ask-youtube.streamlit.app/">An AI Chatbot for Interactive YouTube Video Queries</a></h3>
-								<p>Please <a href="https://github.com/KaziArman/ask-youtube">click here</a> to go through the code & click on the title to use the <a href="https://ask-youtube.streamlit.app/">chat bot</a>.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/dash app cover.png" class="image fit thumb"><img src="images/fulls/dash app cover.png" alt="" /></a>
-								<h3><a href="https://kazi-bayout.herokuapp.com/">Realtime data Visualization from a real estate website using Dash</a></h3>
-								<p>Please <a href="https://github.com/R4H4T/Dash-Project-for-Bayut.com.git">click here</a> to go through the code & project details.</p>
-							</article>
+<div class="shell">
 
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/cluster cover.png" class="image fit thumb"><img src="images/fulls/cluster cover.png" alt="" /></a>
-								<h3><a href="https://github.com/R4H4T/Clustering-Lands-data-using-their-GEO-location.git">Cluster Analysis of nationwide property data</a></h3>
-								<p>Please <a href="https://github.com/R4H4T/Clustering-Lands-data-using-their-GEO-location.git">click here</a> to go through the code & project details.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/lq factor cover.png" class="image fit thumb"><img src="images/fulls/lq factor cover.png" alt="" /></a>
-								<h3><a href="https://public.tableau.com/app/profile/kazi.arman.ahmed/viz/LQFactor_16690282442310/MarketAnalysis">Supply Vs Demand Analysis of the Real Estate Market of USA</a></h3>
-								<p>Please <a href="https://public.tableau.com/app/profile/kazi.arman.ahmed/viz/LQFactor_16690282442310/MarketAnalysis">click here</a> to go through the visualization and project details.</p>
-							</article>
-							
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/cleaning data cover.png" class="image fit thumb"><img src="images/fulls/cleaning data cover.png" alt="" /></a>
-								<h3><a href="https://github.com/R4H4T/Cleaning-Property-Data-using-Python.git">Cleaning raw data of lands all over the USA</a></h3>
-								<p>Please <a href="https://github.com/R4H4T/Cleaning-Property-Data-using-Python.git">click here</a> to go through the code & project details.</p>
-							</article>
-							
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/kpi cover.png" class="image fit thumb"><img src="images/fulls/kpi cover.png" alt="" /></a>
-								<h3><a href="https://public.tableau.com/app/profile/kazi.arman.ahmed/viz/MailerOverviewofLandquire/Dashboard2">Visualizing the KPIs of the Data Management Department by using Tableau</a></h3>
-								<p>Please <a href="https://public.tableau.com/app/profile/kazi.arman.ahmed/viz/MailerOverviewofLandquire/Dashboard2">click here</a> to go through the visualization.</p>
-							</article>
-							
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/Ptak in.PNG" class="image fit thumb"><img src="images/fulls/cover ptak.png" alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/14f26omFOCYJawnzISzg3WQLtj0_uOrOk/view?usp=sharing">Case Study about possible horizontal collaboration opportunities across the supply chain of the industry sectors in Bangladesh to reduce traffic burden. (PTAK Prize Case Competition)</a></h3>
-								<p>Please <a href="https://drive.google.com/file/d/14f26omFOCYJawnzISzg3WQLtj0_uOrOk/view?usp=sharing">click here</a> to go through the project details.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/real estate cover.png" class="image fit thumb"><img src="images/fulls/real estate cover.png" alt="" /></a>
-								<h3><a href="https://github.com/R4H4T/Scraping-On-Market-Real-Estate-Property-Data-with-GEO-Location.git">Data mining from a real estate website to calculate Supply Vs Demand</a></h3>
-								<p>Please <a href="https://github.com/R4H4T/Scraping-On-Market-Real-Estate-Property-Data-with-GEO-Location.git">click here</a> to go through the code & project details.</p>
-							</article>
-						</div>
-					</section>
+  <!-- ===================== LEFT RAIL ===================== -->
+  <aside class="rail">
+    <div class="ident">
+      <div class="avatar">
+        <!-- Drop a square-ish photo at assets/profile.png and it replaces the initials automatically. -->
+        <img id="avatarImg" src="assets/profile.png" alt="Kazi Arman Ahmed" onerror="this.remove()" />
+        <span class="mono" id="avatarMono">KA</span>
+      </div>
+      <div class="ident__text">
+        <h1 class="ident__name">Kazi Arman Ahmed</h1>
+        <p class="ident__role"><b>M.S. Business Analytics &amp; Data Science</b> <b>M.S. Industrial Engineering &amp; Management</b><b>Oklahoma State University</b></p>
+        <p class="ident__mail"><a href="mailto:kazi.ahmed@okstate.edu">kazi.ahmed@okstate.edu</a></p>
+      </div>
+    </div>
 
-					<section id="five">
-						<h2><b>Certifications</b></h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/AZURE.png" class="image fit thumb"><img src="images/fulls/AZURE_cover.png" alt=""/></a>
-								<h3><a href="https://drive.google.com/file/d/1wlsYqstxRqc_pRVdDlXPvBJ8RwlNJ2Ef/view?usp=sharing">Microsoft Azure AI Fundamentals (AI-900)</a></h3>
-								<p>Earned the Microsoft Azure AI Fundamentals (AI-900) certification, demonstrating foundational knowledge of AI concepts and Microsoft Azure services used for machine learning and artificial intelligence solutions.</br>
-								</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/coupa in.png" class="image fit thumb"><img src="images/fulls/coupa cover.png" alt=""/></a>
-								<h3><a href="https://drive.google.com/file/d/1s3Mgqa6wCsA3WEE6WRrXdiZoHqFvNt-X/view?usp=sharing">Coupa Supply Chain Design Certification</a></h3>
-								<p>Certified in Coupa Supply Chain Design & Planning (LLamasoft), with hands-on expertise in building and running complex network optimization models to identify cost savings and build resilient supply chain strategies.</br>
-								</p>
-							</article>
+    <div class="contact">
+      <a href="https://scholar.google.com/citations?hl=en&user=C6KttPcAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">
+        <svg class="ic-fill" viewBox="0 0 24 24"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.29 14.978 9.5 12 9.5c-2.977 0-5.548 1.79-6.758 4.269zM12 10a7 7 0 0 0-7 7h2a5 5 0 0 1 10 0h2a7 7 0 0 0-7-7z"/></svg>
+      </a>
+      <a href="assets/cv.pdf" target="_blank" rel="noopener" aria-label="Curriculum vitae" title="CV">
+        <svg viewBox="0 0 24 24"><path d="M8 3h6l5 5v12a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h5"/></svg>
+      </a>
+      <a href="https://github.com/KaziArman" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+        <svg class="ic-fill" viewBox="0 0 24 24"><path d="M12 .5C5.7.5.9 5.3.9 11.6c0 4.9 3.2 9.1 7.6 10.6.6.1.8-.2.8-.5v-2c-3.1.7-3.8-1.3-3.8-1.3-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.5-.3-5.1-1.2-5.1-5.5 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.4.1-2.9 0 0 .9-.3 3 1.1.9-.2 1.8-.4 2.7-.4.9 0 1.8.1 2.7.4 2.1-1.4 3-1.1 3-1.1.6 1.5.2 2.6.1 2.9.7.8 1.1 1.8 1.1 3 0 4.3-2.6 5.2-5.1 5.5.4.3.8 1 .8 2.1v3.1c0 .3.2.6.8.5 4.4-1.5 7.6-5.7 7.6-10.6C23.1 5.3 18.3.5 12 .5z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/r4h4t/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+        <svg class="ic-fill" viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9z"/></svg>
+      </a>
+      <a href="https://orcid.org/0000-0002-8224-9349" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID">
+        <svg class="ic-fill" viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0z"/><path fill="var(--paper)" d="M7.369 4.378a.995.995 0 1 1 0 1.99.995.995 0 0 1 0-1.99zM6.635 7.575h1.467v9.033H6.635zM10.478 7.575h3.526c3.36 0 4.837 2.404 4.837 4.517 0 2.296-1.797 4.516-4.822 4.516h-3.541V7.575zm1.467 1.32v6.396h1.978c2.11 0 3.117-1.303 3.117-3.196 0-1.906-1.007-3.2-3.117-3.2h-1.978z"/></svg>
+      </a>
+    </div>
 
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/sc3.png" class="image fit thumb"><img src="images/fulls/sc3n.png" alt=""/></a>
-								<h3><a href="https://courses.edx.org/certificates/2a8131f5bd1a48d78ec9cf7d32ab7484">Supply Chain Dynamics</a></h3>
-								<p>A course about Supply Chain Dynamics offered by MITx, an online learning initiative of the Massachusetts Institute of Technology.</br>
-								</p>
-							</article>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#news">News</a>
+      <a href="#publications">Publications<span class="nav__count" id="pubCount"></span></a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#honors">Honors</a>
+      <a href="#projects">Projects</a>
+    </nav>
 
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/sc1.png" class="image fit thumb"><img src="images/fulls/sc1n.png" alt=""/></a>
-								<h3><a href="https://courses.edx.org/certificates/f2749b6b69284383b70c9f3f86b6c153">Supply Chain Fundamentals</a></h3>
-								<p>A course about Supply Chain Fundamentals offered by MITx, an online learning initiative of the Massachusetts Institute of Technology.</br>
-								</p>
-							</article>
+    <!-- Quote under the navigation (desktop sidebar only) -->
+    <blockquote class="rail-quote">&ldquo;The important thing is not to stop questioning. Curiosity has its own reason for existing.&rdquo;<cite>Albert Einstein</cite></blockquote>
+  </aside>
 
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/sc0.png" class="image fit thumb"><img src="images/fulls/sc0n.png" alt=""/></a>
-								<h3><a href="https://courses.edx.org/certificates/cf5ef9add90f4a6e8033538b3756b761">Supply Chain Analytics</a></h3>
-								<p>A course about Suuply Chain Analytics offered by MITx, an online learning initiative of the Massachusetts Institute of Technology.</br>
-								</p>
-							</article>
+  <!-- ===================== RIGHT CONTENT ===================== -->
+  <main class="content" id="main">
 
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/DataCamp.png" class="image fit thumb"><img src="images/fulls/datacamp cover.png" alt=""/></a>
-								<h3><a href="https://drive.google.com/drive/folders/1Y9yEax2sW_gd3nSABCbfR2OaK7hjr0RL?usp=sharing">Data Analyst with Python</a></h3>
-								<p>A Professional <b>Data Analyst</b> Certificate Provided by Datacamp which covered the uses of numpy, pandas, seaborn, scipy.stats for Data Analysis</br>
-								<b>Please <a href="https://drive.google.com/drive/folders/1Y9yEax2sW_gd3nSABCbfR2OaK7hjr0RL?usp=sharing">click here</a> to go through all the courses that I covered.</b>
-								</p>
-							</article>
+    <!-- About -->
+    <section class="view" id="about" aria-labelledby="t-about">
+      <div class="view__head">
+        <h2 class="view__title" id="t-about">About me</h2>
+        <p class="view__lede">My interests lie in stochastic and decentralized optimization, machine learning, and their application to energy and healthcare systems.</p>
+      </div>
+      <p class="prose">I hold an M.S. in <a class="inl" href="https://ceat.okstate.edu/iem/" target="_blank" rel="noopener">Industrial Engineering and Management</a> with a concentration in Operations Research and Analytics, and I am completing an M.S. in <a class="inl" href="https://business.okstate.edu/analytics" target="_blank" rel="noopener">Business Analytics and Data Science</a> at Oklahoma State University, both with a 4.0 GPA. I currently work as an Advanced Analytics Intern with the Data Research and Analytics team at <a class="inl" href="https://www.acg.aaa.com/site-map.html" target="_blank" rel="noopener">AAA - The Auto Club Group</a>.</p>
+      <p class="prose">Before that, I was a Graduate Research Assistant in the <a class="inl" href="https://disys-lab.github.io/" target="_blank" rel="noopener">Distributed Intelligent Systems (DISys) Laboratory</a>, advised by <a class="inl" href="https://ceat.okstate.edu/iem/people/ramanan-faculty-profile.html" target="_blank" rel="noopener">Dr. Paritosh Ramanan</a>, where I worked on decentralized optimization for decarbonizing energy-intensive industry. I continue that work by building an agentic AI framework that tunes the penalty parameter of decentralized optimization algorithms, so they converge efficiently without hand tuning.</p>
+      <p class="prose">Earlier, I spent three and a half years as a data analyst in industry and taught industrial engineering as a lecturer. I am now applying to PhD programs in Industrial Engineering and Operations Research for Fall 2027.</p>
+    </section>
 
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/isca in.PNG" class="image fit thumb"><img src="images/fulls/isca cover.png" alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/1XYgS9YIXDuIGyBMIIFgODkLSEJcCC2hQ/view?usp=sharing">Certified Supply Chain Analyst</a></h3>
-								<p>A course about Supply Chain Practices in Industry Level offered by Internation Supply Chain Education Alliance (ISCEA), after successfully completing the course and passing the exam one is rewarded with CSCA Credential</p>
-							</article>
-							
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/Python Data Structures.png" class="image fit thumb"><img src="images/fulls/Python Data Structures.png" alt=""/></a>
-								<h3><a href="https://www.coursera.org/account/accomplishments/verify/XKKUZLVRMDYE">Python Data Structures</a></h3>
-								<p>An online non-credit course about basics of Data Science authorized by Johns Hopkins University and offered through Coursera</br>
-								<b>Grade Achieved: 100%</b>
-								</p>
-							</article>
+    <!-- Research -->
+    <!-- Three themes. Each theme: number, title, one-sentence problem, optional steps, method tags. -->
+    <section class="block" id="research" aria-labelledby="b-research">
+      <div class="block__head"><h3 class="block__title" id="b-research">Research</h3></div>
+      <p class="rstate">The curiosity behind my research is a question I keep returning to: <em>can independent systems, each guarding its own data, still decide together as well as if they had shared everything?</em> Two directions of my work pursue it directly. Alongside them, I work on healthcare analytics, where the challenge shifts from coordination to extracting reliable signals from large, messy clinical data.</p>
+      <div class="themes">
 
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/A Crash Course in Data Science.png" class="image fit thumb"><img src="images/fulls/A Crash Course in Data Science.png" alt=""/></a>
-								<h3><a href="https://www.coursera.org/account/accomplishments/verify/2RYLX8J674VF">A Crash Course in Data Science</a></h3>
-								<p>An online non-credit course about basics of Data Science authorized by Johns Hopkins University and offered through Coursera</br>
-								<b>Grade Achieved: 100%</b>
-								</p>
-							</article>
+        <article class="theme">
+          <div class="theme__num">01</div>
+          <div>
+            <div class="theme__head"><h4 class="theme__title">Decentralized decision-making under uncertainty</h4></div>
+            <p class="theme__lede">Power grids and the industrial plants they serve must plan together, but plants will not share their operating data. I build methods that let them coordinate anyway.</p>
+            <ol class="steps">
+              <li><span class="step__k">Coordinate</span><p>We developed a decentralized framework in which a 2,000-bus transmission grid and 26 electrified chemical plants schedule jointly through ADMM, exchanging only coordination signals instead of private operating data.</p></li>
+              <li><span class="step__k">Handle uncertainty</span><p>My thesis adds uncertain on-site wind and solar. Each plant becomes a two-stage stochastic program, the grid and plants negotiate reserve capacity rather than power demand, and renewable scenarios are generated without pooling plant data.</p></li>
+              <li><span class="step__k">Forecast</span><p>Federated learning carries the same principle into prediction. Plants train a shared load forecaster while their meter data stays local, so a newly connected plant with little history still receives accurate forecasts.</p></li>
+            </ol>
+            <div class="theme__meta"><span class="tag">Stochastic programming</span><span class="tag">ADMM</span><span class="tag">Unit commitment</span><span class="tag">Federated learning</span></div>
+          </div>
+        </article>
 
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/Programming for Everybody (Getting Started with Python).png" class="image fit thumb"><img src="images/fulls/Programming for Everybody (Getting Started with Python).png" alt=""/></a>
-								<h3><a href="https://www.coursera.org/account/accomplishments/verify/9EYJ5LZWJ78S">Programming for Everybody (Getting Started with Python)</a></h3>
-								<p>An online non-credit course about basics of Python authorized by University of Michigan and offered through Coursera</br>
-								<b>Grade Achieved: 98.34%</b>
-								</p>
-							</article>
+        <article class="theme">
+          <div class="theme__num">02</div>
+          <div>
+            <div class="theme__head"><h4 class="theme__title">Agentic AI for decentralized optimization</h4><span class="status status--wip">In progress</span></div>
+            <p class="theme__lede">Decentralized algorithms such as ADMM converge only as fast as their penalty parameter allows, and that parameter is usually tuned by hand for each problem.</p>
+            <p class="theme__lede">I am developing skills for Scarlet Composer, our lab's multi-agent framework, that run the grid and each plant as independent agents solving their own subproblems. An LLM coordinator observes only privacy-preserving convergence signals and adapts the penalty, so coordination tunes itself across problems without any plant revealing its data.</p>
+            <div class="theme__meta"><span class="tag">Multi-agent systems</span><span class="tag">LLMs</span><span class="tag">Distributed optimization</span><a class="theme__link" href="https://github.com/disys-lab/scarlet-composer-studio" target="_blank" rel="noopener">Scarlet Composer &rarr;</a></div>
+          </div>
+        </article>
 
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/Using Python to Access Web Data.png" class="image fit thumb"><img src="images/fulls/Using Python to Access Web Data.png" alt=""/></a>
-								<h3><a href="https://www.coursera.org/account/accomplishments/verify/4U2ERNWPR2QA">Using Python to Access Web Data</a></h3>
-								<p>An online non-credit course about Scraping the web data using Python authorized by University of Michigan and offered through Coursera</br>
-								<b>Grade Achieved: 99.09%</b>
-								</p>
-							</article>
+        <article class="theme">
+          <div class="theme__num">03</div>
+          <div>
+            <div class="theme__head"><h4 class="theme__title">Healthcare analytics</h4></div>
+            <p class="theme__lede">Real-world clinical records covering more than 10 million patients, used to map how comorbidities emerge before and after a Juvenile Idiopathic Arthritis diagnosis to support earlier detection, alongside machine-learning models for disease prediction.</p>
+            <div class="theme__meta"><span class="tag">Real-world data</span><span class="tag">Trajectory modeling</span><span class="tag">Predictive ML</span></div>
+          </div>
+        </article>
 
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/Using Databases with Python.png" class="image fit thumb"><img src="images/fulls/Using Databases with Python.png" alt=""/></a>
-								<h3><a href="https://www.coursera.org/account/accomplishments/verify/J5KX3NFEFEJZ">Using Databases with Python</a></h3>
-								<p>An online non-credit course about Database handeling using Python authorized by University of Michigan and offered through Coursera</br>
-								<b>Grade Achieved: 99.09%</b>
-								</p>
-							</article>
+      </div>
 
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/Advanced Styling with Responsive Design.png" class="image fit thumb"><img src="images/fulls/Advanced Styling with Responsive Design.png" alt=""/></a>
-								<h3><a href="https://www.coursera.org/account/accomplishments/verify/U3WYRKK2JZ8R">Advanced Styling with Responsive Design</a></h3>
-								<p>An online non-credit course about Responsive Website Design authorized by University of Michigan and offered through Coursera</br>
-								<b>Grade Achieved: 94.78%</b>
-								</p>
-							</article>
+      <p class="rsub">Also working on</p>
+      <article class="rmini"><span class="ricon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8"/></svg></span><div><h4>Agentic AI evaluation</h4><p>Frameworks that test conversational analytics agents against automatically generated reference questions, catching hallucinated answers before deployment.</p></div></article>
+    </section>
 
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/Interactivity with Javascript.png" class="image fit thumb"><img src="images/fulls/Interactivity with Javascript.png" alt="Interactivity with Javascript" /></a>
-								<h3><a href="https://www.coursera.org/account/accomplishments/verify/JFMAGGA2CF32">Interactivity with Javascript</a></h3>
-								<p>An online non-credit course about Javascript authorized by University of Michigan and offered through Coursera</br>
-								<b>Grade Achieved: 94.82%</b>
-								</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/Excel.jpeg" class="image fit thumb"><img src="images/fulls/excel cover.png" alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/1MhJ2EgQU-mqZQ2N9IizyHPub7sNHxQLn/view?usp=sharing">Professional Microsoft Excel</a></h3>
-								<p>A professional course about advance uses of Microsoft Excel offered by Skill Hunt Bangladesh.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/plc cover.png" class="image fit thumb"><img src="images/fulls/plc cover.png"alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/1sX-3tp-hVftwM29equEBoov56oj109rP/view?usp=sharing">Short Course on PLC based Industrial Automation</a></h3>
-								<p>A short course on uses of PLC (Siemens) as Industrial Automation System offered by Reliance High Tech Ltd</p>
-							</article>
-						</div>
-					</section>
+    <!-- News -->
+    <section class="block" id="news" aria-labelledby="b-news">
+      <div class="block__head">
+        <h3 class="block__title" id="b-news">News</h3>
+        <p class="block__more" id="newsMeta"></p>
+      </div>
+      <div class="newswrap">
+        <div class="newsscroll" id="newsScroll" role="region" aria-labelledby="b-news" tabindex="0">
+          <ul class="news" id="newsList"></ul>
+        </div>
+        <div class="years" id="yearNav" role="group" aria-label="Jump to a year in the news"></div>
+      </div>
+    </section>
 
-						<section id="six">
-							<h2><b>Achievements</b></h2>
+    <!-- Publications -->
+    <section class="block" id="publications" aria-labelledby="b-pubs">
+      <div class="block__head">
+        <h3 class="block__title" id="b-pubs">Publications</h3>
+        <a class="block__more" href="https://scholar.google.com/citations?hl=en&user=C6KttPcAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      </div>
+      <div class="pubs" id="pubList"></div>
+      <button type="button" class="viewall" id="pubToggle" aria-expanded="false" hidden></button>
+    </section>
 
-							<div class="row">
-								<article class="col-6 col-12-xsmall work-item">
-									<a href="images/fulls/mist ipe.jpg" class="image fit thumb"><img src="images/fulls/mist thumb.jpg" alt="" /></a>
-									<h3><a href="images/fulls/mist grad.jpg">MIST Merit Based Scholarship for Academic Excellence</a></h3>
-									<p>Attained recognition by maintaining a place in the top 5 and securing a GPA of over 3.7 throughout the fourth, fifth, and eighth semesters.</p>
-								</article>
+    <!-- Education -->
+    <section class="block" id="education" aria-labelledby="b-edu">
+      <div class="block__head"><h3 class="block__title" id="b-edu">Education</h3></div>
+      <dl class="deflist">
+        <dt>2025 to 2027</dt>
+        <dd><b>M.S. Business Analytics and Data Science</b>, GPA 4.0 <span>Oklahoma State University. Graduate Certificate in Business Analytics and Data Science awarded 2025.</span></dd>
+        <dt>2024 to 2026</dt>
+        <dd><b>M.S. Industrial Engineering and Management</b>, GPA 4.0 <span>Oklahoma State University. Operations Research and Analytics concentration, thesis option. Advisor: Dr. Paritosh Ramanan.</span></dd>
+        <dt>2016 to 2020</dt>
+        <dd><b>B.S. Industrial and Production Engineering</b>, GPA 3.58 <span>Military Institute of Science and Technology, Dhaka</span></dd>
+      </dl>
+    </section>
 
-								<article class="col-6 col-12-xsmall work-item">
-									<a href="images/fulls/LQ certificate.jpg" class="image fit thumb"><img src="images/fulls/cover lq.png" alt="" /></a>
-									<h3><a href="images/fulls/LQ certificate.jpg">Certificate of Excellence</a></h3>
-									<p>Got recognition as the outstanding employee for the fiscal year 2022.</p>
-								</article>
+    <!-- Experience -->
+    <section class="block" id="experience" aria-labelledby="b-exp">
+      <div class="block__head"><h3 class="block__title" id="b-exp">Experience</h3></div>
+      <dl class="deflist">
+        <dt>since 2026</dt>
+        <dd><b>Advanced Analytics Intern</b>, Data Research and Analytics, AAA, The Auto Club Group <span>Conversational data agents with Google ADK and Gemini over BigQuery and Tableau, Dataplex data-quality checks, and a marketing-attribution model with Google Meridian.</span></dd>
+        <dt>2025 to 2026</dt>
+        <dd><b>Graduate Research Assistant</b>, Distributed Intelligent Systems (DISys) Laboratory, Oklahoma State University <span>Privacy-preserving stochastic reserve coordination between a 2,000-bus grid and 26 chemical plants via two-phase ADMM on HPC clusters (cost within 1.3% and emissions within 0.7% of a centralized solution), and trajectory-modeling pipelines on real-world clinical data.</span></dd>
+        <dt>2024</dt>
+        <dd><b>Graduate Teaching Assistant</b>, Oklahoma State University, IEM <span>Python and Excel labs for ENGR 1412, Canvas for 60+ students, roughly 95% positive evaluations.</span></dd>
+        <dt>2021 to 2024</dt>
+        <dd><b>Data Analyst</b>, LandQuire Management LLC <span>Automated ETL and dashboards with Python, SQL, and Supermetrics, cutting manual reporting by 85%. Certificate of Excellence recipient.</span></dd>
+        <dt>2020</dt>
+        <dd><b>Lecturer</b>, European University, Bangladesh <span>Operations research, manufacturing, and optimization; mentored 30+ capstone students.</span></dd>
+      </dl>
+    </section>
 
-								<article class="col-6 col-12-xsmall work-item">
-									<a href="images/fulls/ptak.PNG" class="image fit thumb"><img src="images/fulls/ptak cover.png" alt="" /></a>
-									<h3><a href="https://drive.google.com/file/d/12x3i1zHlmgDuPxL8tlP5CIfFZtklokP_/view?usp=sharing">Ptak Prize Scholarship Winner</a></h3>
-									<p>Scholarship Winner at Ptak Prize 2018, a reputed international competition organized by International Supply Chain Education Alliance (ISCEA).</p>
-								</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/nrf.png" class="image fit thumb"><img src="images/fulls/robot cover.png" alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/1_-B5WbwOlgoa2vJEiahg0vYAa2gMY0Il/view?usp=sharing">1st Runner Up in "Design & Simulation" at "National Robotic Festival 2017"</a></h3>
-								<p>Achieved “1st Runner Up” Prize and received recognition from <a href="https://en.wikipedia.org/wiki/Marcia_Bernicat">Marcia Bernicat</a> (Former US Ambassador to Bangladesh) at National Robotic Festival</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/tech certificate.png" class="image fit thumb"><img src="images/fulls/Tech Cover.png" alt="" /></a>
-								<h3><a href="https://www.facebook.com/nsuacmsc/photos/a.1035769453240754/1035859709898395">1st Runner up in “IT Business Idea Challenge” at “Technovation 2018”</a></h3>
-								<p>Achieved "1st Runner Up" Place in "Technovation 2018" organized by North South University. And also our business idea got recognition from Grameenphone Bangladesh.</p>
-							</article>
+    <!-- Honors -->
+    <section class="block" id="honors" aria-labelledby="b-hon">
+      <div class="block__head"><h3 class="block__title" id="b-hon">Honors and awards</h3></div>
 
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/cover robolutrion.png" class="image fit thumb"><img src="images/fulls/robolution.png"  alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/1FDQizEH121x5Yni0qszWMU6EauLa_z9g/view?usp=sharing">2nd Runner up in “Master Mind” at “Robolution 2018”</a></h3>
-								<p>Achieved "2nd Runner Up" place in "Master Mind" segment organized by MIST Robotics Club.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/micro controller cover.png" class="image fit thumb"><img src="images/fulls/micro controller cover.png"  alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/12tLeC2cJ79obON4ewXa2qlnoIkvJfexy/view?usp=sharing">2nd Runner up in “Microcontroller Project” at “Intra University Robotics Competition 2018”</a></h3>
-								<p>Achieved 3rd best “Microcontroller Project" recognition from Military Institute of Science and Technology.</p>
-							</article>
-							<!--
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
-								<h3>2nd Runner up in “Business Idea Challenge” at “Business Innovation Summit 2018”</h3>
-								<p>Got recognition for the 3rd Best Business Idea at "Business Innovation Summit 2018" organized by Bangladesh Business Innovation Forum.</p>
-							</article>
-							-->
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/football.jpg" class="image fit thumb"><img src="images/fulls/football cover.png" alt="" /></a>
-								<h3>Champion in Inter Dept. Football Competition at MIST</h3>
-								<p>Won the Champion Trophy at "Inter Department Football Competition-2018", played as the Right Back.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/gold.png" class="image fit thumb"><img src="images/fulls/medel.jpg" alt="" /></a>
-								<h3>Gold Medalist in “Intra District Karate Competition” at Chittagong </h3>
-								<p>Won Gold Medel in "Intra District Karate Competition" which was organized by Chittagong District Sports Association</p>
-							</article>
-						</div>
-					</section>
+      <h4 class="subh">Awards and competitions</h4>
+      <dl class="deflist">
+        <dt>2026</dt><dd><b>National Champion</b>, Data4Good Competition, Johns Hopkins University <span><a class="inline-link" href="https://ceat.okstate.edu/announcements/iem/2026/osu-graduate-student-team-wins-national-data-four-good-analytics-competition" target="_blank" rel="noopener">Press release</a></span></dd>
+        <dt>2026</dt><dd><b>Finalist (Top 5)</b>, IISE Energy Analytics Challenge</dd>
+        <dt>2026</dt><dd><b>1st Runner-Up</b>, OSU Datathon, Spears School of Business</dd>
+        <dt>2026</dt><dd><b>Winner</b>, M.S. BAnDS Business Case Competition, Oklahoma State University</dd>
+        <dt>2025</dt><dd><b>Winner</b>, AlphaRamos Marketing Hackathon <span><a class="inline-link" href="https://news.okstate.edu/articles/business/2025/ms-bands-alpha-ramos-hackathon" target="_blank" rel="noopener">Press release</a></span></dd>
+        <dt>2025</dt><dd><b>Research Symposium Token Prize</b>, 2nd Annual IEM Research Symposium, Oklahoma State University</dd>
+        <dt>2024</dt><dd><b>Certificate of Excellence</b>, LandQuire Management LLC</dd>
+      </dl>
 
-					<section id="seven">
-						<h2><b>Extra Curricular Activities</b></h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/speaker.jpg" class="image fit thumb"><img src="images/fulls/speaker cover.png" alt="" /></a>
-								<h3><a href="https://www.facebook.com/mist.optimist/photos/a.271199767621115/286314796109612/">Guest Speaker at MIST OptiMist Club</a></h3>
-								<p>Got invited as the "Guest Speaker" at a seminar about Supply Chain Management, organized by MIST OptiMist Club.</br>
-									Topic Was:- "Getting Started with PTAK: Road Towards CSCA"</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/MIST DS.png" class="image fit thumb"><img src="images/fulls/ds cover.png" alt="" /></a>
-								<h3><a href="https://m.facebook.com/story.php?story_fbid=pfbid02MCydLnRNYYPnJzC4ozt639J5kLcvUkadtZaS1cwz4UfxBMa57jGrXnDbuLSSZaBgl&id=203240733105240">President of MIST Debating Society</a></h3>
-								<p>Organized Idea Hamaster-2, Orator's Ground-1, Orientation and Annual General Meeting.</br>
-								Got recognition as the best club to organize most event in a calander year.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/Debate Club Event.jpeg" class="image fit thumb"><img src="images/fulls/rsz_1dc_cover.png" alt="" /></a>
-								<h3>Debate Captain of MIST IPE Department</h3>
-								<p>Led the department to the semifinal of "Inter Department Debate Competition".</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/Hult in.jpg" class="image fit thumb"><img src="images/fulls/hult_cover.png" alt="" /></a>
-								<h3><a href="https://www.facebook.com/HultPrizeMIST/posts/pfbid02hDt2Z9Ff7fQTi4YAboJfpQDQZXUgWWjNuP2DBWhU3Khn6zDuwKunYLvaD7DYJUbMl">Media & Sponsorship Coordinator of Hult Prize at MIST</a></h3>
-								<p>Successfully organized "Hult Prize at MIST-2019". </p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/BYLC at MIST.jpeg" class="image fit thumb"><img src="images/fulls/bylc_rahat_cover.png" alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/1HQSrlAUE02kCBwnfhwj1JUyHDMt3H16R/view?usp=sharing">Campus Ambassador of BYLC (Bangladesh Youth Leadership Center)</a></h3>
-								<p>Was the front face of BYLC in MIST. Explained the students about the importance of youth leadership.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/iscea campus ambassador.PNG" class="image fit thumb"><img src="images/fulls/iscea campus cover.png" alt="" /></a>
-								<h3><a href="https://www.facebook.com/IsceaBangladesh/photos/a.2212482562103074/2226225724062091/">Campus Ambassador of ISCEA (International Supply Chain Education Alliance) Bangladesh</a></h3>
-								<p>Motivated the students to learn Supply Chain Management. Many students from different departments took the opportunity provided by ISCEA to learn Supply Chain Management.</p>
-							</article>
-						</div>
+      <h4 class="subh">Scholarships</h4>
+      <dl class="deflist">
+        <dt>2026</dt><dd><b>Creativity, Innovation and Entrepreneurship (CIE) Scholar</b>, Oklahoma State University</dd>
+        <dt>2025</dt><dd><b>SAS Advisory Board Scholarship</b>, Oklahoma State University</dd>
+        <dt>2017, 2018</dt><dd><b>Merit Scholarship</b>, Military Institute of Science and Technology <span>Top 5 of the academic batch</span></dd>
+      </dl>
 
-						<ul class="actions">
-							<li><a href="#" class="button">Full Portfolio</a></li>
-						</ul>
-					</section>
-					</section>
+      <h4 class="subh">Honor societies</h4>
+      <dl class="deflist">
+        <dt>2026</dt><dd><b>Alpha Pi Mu</b>, Industrial Engineering Honor Society</dd>
+        <dt>2025</dt><dd><b>Tau Beta Pi</b>, Engineering Honor Society</dd>
+      </dl>
 
+      <h4 class="subh">Leadership and service</h4>
+      <dl class="deflist">
+        <dt>since 2025</dt><dd><b>GPSGA Representative</b>, Business Analytics Student Association, Oklahoma State University</dd>
+        <dt>2024 to 2025</dt><dd><b>Vice President</b>, INFORMS Student Chapter, Oklahoma State University</dd>
+        <dt>ongoing</dt><dd><b>Reviewer</b>, Expert Systems with Applications and Healthcare Analytics (Elsevier)</dd>
+      </dl>
+    </section>
 
-				<!-- Three -->
-					<section id="eight">
+    <!-- Projects -->
+    <section class="block" id="projects" aria-labelledby="b-proj">
+      <div class="block__head"><h3 class="block__title" id="b-proj">Selected projects</h3></div>
+      <dl class="deflist">
+        <dt>Blockchain</dt>
+        <dd><b>GridFlex Chain</b> <span>Besu/QBFT, IPFS. A permissioned blockchain market where homes, critical facilities, and an industrial microgrid trade surplus solar through sealed-bid auctions, with commit-reveal privacy for meter readings and bids, priority allocation for critical loads, and a tamper-evident audit trail. In progress.</span></dd>
+        <dt>Optimization</dt>
+        <dd><b>Power Flow Optimization Web App</b> <span>Python, Pyomo, Gurobi, Streamlit. Reduces generation cost by 15% and visualizes grid operations with auto-layout diagrams. <a href="https://power-supply-optimization.streamlit.app/" target="_blank" rel="noopener">Live</a> · <a href="https://github.com/KaziArman/Optimal-Power-Supply" target="_blank" rel="noopener">Code</a></span></dd>
+        <dt>Optimization</dt>
+        <dd><b>Optimized Work Scheduling</b> <span>MILP, Gurobi, Python. Cut scheduling conflict hours by 90% with 100% shift coverage. <a href="https://github.com/KaziArman/Optimized-Work-Scheduling-for-Employee-Satisfaction" target="_blank" rel="noopener">Code</a></span></dd>
+        <dt>NLP</dt>
+        <dd><b>Ask-YouTube Chatbot</b> <span>Embeddings, retrieval, Streamlit. Timestamp-aware question answering over video transcripts. <a href="https://ask-youtube.streamlit.app/" target="_blank" rel="noopener">Live</a> · <a href="https://github.com/KaziArman/ask-youtube" target="_blank" rel="noopener">Code</a></span></dd>
+      </dl>
+    </section>
 
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<h2>Contact Information</h2>
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-										Protik Housing South Banasree, Dhaka 1219, Bangladesh
-									<li>
-										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-										+8801679279490
-									</li>
-									<li>
-										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="mailto:kazi.arman.mist@gmail.com">kazi.arman.mist@gmail.com</a>
-										<li><h3 class="fa fa-graduation-cap"></h3><a href="https://scholar.google.com/citations?hl=en&user=C6KttPcAAAAJ"><b>Google Scholar   &nbsp;</b></a><b>&nbsp;&nbsp;&nbsp;</b><i class="fas fa-microscope"></i><a href="https://www.researchgate.net/profile/Kazi-Ahmed-35"><b>&nbsp;&nbsp;&nbsp;ResearchGate</b></a></li>
-										<li><h3 class="icon brands fa-linkedin"></h3><a href="https://www.linkedin.com/in/r4h4t/"><b>Linked In    &nbsp;&nbsp;&nbsp;&nbsp;</b></a><i class="icon brands fa-github"></i><a a href="https://github.com/KaziArman"><b>     &nbsp;&nbsp;Github</b></a></li>
-										<li><h3 class="fa-solid fa-file"></h3><a href="https://drive.google.com/file/d/1CgdOxgvbVZIbGo1YcrNdM8LGU9c_Nhb9/view?usp=sharing"><b>CV / Resume    &nbsp;&nbsp;&nbsp;&nbsp;</b></a>
-									</li>
-								</ul>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/r2.png" class="image fit thumb"><img src="images/tt2.jpg" alt="" /></a>
-								<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=0e1633&w=300&t=tt&d=GM6wCgucZVy2NB0NjN3O8BIkZ2fhsbHhu0jR4X6Vr4k&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=cdd4d9'></script>
+    <!-- Acknowledgments -->
+    <section class="block ack" id="ack" aria-labelledby="b-ack">
+      <div class="block__head"><h3 class="block__title" id="b-ack">Acknowledgments</h3></div>
+      <p class="prose">I am grateful to the mentors and organizations that have supported my research and growth.</p>
+      <p class="prose"><b>Mentors:</b> Dr. Paritosh Ramanan (Research Advisor), Dr. Jennifer Glenn, Dr. Akash Deep, Dr. Zheyu Jiang, Dr. Mohammad Fili, Dr. Guiping Hu, Dr. Lizhi Wang, and Dr. Dursun Delen, and my undergraduate mentors at the Military Institute of Science and Technology.</p>
+      <p class="prose">My research is supported in part by the <b>National Science Foundation</b> under Award 2343072.</p>
+    </section>
 
+    <!-- Contact -->
+    <section class="block" id="contact" aria-labelledby="b-con">
+      <div class="block__head"><h3 class="block__title" id="b-con">Contact</h3></div>
+      <p class="prose">The best way to reach me is by email. I am glad to talk about optimization under uncertainty, agentic analytics, and research collaborations.</p>
+      <p class="prose" style="margin-top:.6rem;"><a href="mailto:kazi.ahmed@okstate.edu" style="border-bottom:1px solid var(--rule);padding-bottom:1px;color:var(--ink-2);">kazi.ahmed@okstate.edu</a></p>
 
-								<button id="topBtn"><a href="#one">&uarr;Top</a></button>
-							</article>
-						</div>
-					</section>
+      <!-- Visitor map (MapMyVisitors). The map draws where this script sits. -->
+      <div class="visitor-map">
+        <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?cl=4fb8d9&w=a&t=n&d=2m0ffx-uJW1qVjGUVmTtqhjaIxDo6uZSpFNrkPf2uRg&co=f7f9ef"></script>
+      </div>
 
-			</article>
+      <blockquote class="epigraph epigraph--mobile">&ldquo;The important thing is not to stop questioning. Curiosity has its own reason for existing.&rdquo;<cite>Albert Einstein</cite></blockquote>
+    </section>
 
+  </main>
+</div>
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>-->
-						<li><a href="https://github.com/KaziArman" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<!-- <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>-->
-						<li><a href="mailto:kazi.arman.mist@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						<li><a href="https://www.linkedin.com/in/r4h4t/" class="icon brands fa-linkedin"><span class="label">Linked In</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li><i class="fa fa-graduation-cap"></i><a href="https://scholar.google.com/citations?hl=en&user=C6KttPcAAAAJ"><b>&nbsp;&nbsp;Google Scholar</b></a></li>
-						<li><i class="fa-brands fa-orcid"></i><a href="https://orcid.org/0000-0002-8224-9349"><b>&nbsp;&nbsp;ORCID</b></a></li>
-						<li><i class="fas fa-microscope"></i><a href="https://www.researchgate.net/profile/Kazi-Ahmed-35"><b>&nbsp;&nbsp;ResearchGate</b></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Kazi Arman Ahmed</li><li>Design by: <a href="https://www.linkedin.com/in/r4h4t/">Kazi Arman Ahmed</a></li>
-					</ul>
-				</div>
-			</footer>
+<footer class="foot">
+  <div class="foot__in">
+    <p class="foot__txt">Built with plain HTML, CSS, and JavaScript. Layout adapted from the CC0 <b>minimal-light</b> family.</p>
+    <p class="foot__stamp">&copy; <span id="yr"></span> Kazi Arman Ahmed</p>
+  </div>
+</footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-	</body>
+<script>
+/* ============================================================
+   EDIT YOUR CONTENT HERE
+   News and Publications are built from these two arrays.
+   Everything else (About, Research, Projects, Experience,
+   Education, Honors, Acknowledgments) is plain HTML above.
+   ============================================================ */
+
+/* NEWS: any order is fine; entries are sorted by date automatically.
+   date is YYYY-MM-DD. The year timeline is built from these dates. */
+var NEWS = [
+  { date: "2026-10-01", text: "Submitted a manuscript on personalized federated load forecasting to IEEE TPEC 2027." },
+  { date: "2026-07-15", text: "Selected as a CIE Scholar at Oklahoma State University." },
+  { date: "2026-07-03", text: "Defended my M.S. IEM thesis in stochastic decentralized optimization successfully." },
+  { date: "2026-06-27", text: "Submitted a manuscript on decentralized optimization to Electric Power Systems Research Journal." },
+  { date: "2026-05-18", text: "Started as an Advanced Analytics Intern under Data Research and Analytics Department at AAA - The Auto Club Group." },
+  { date: "2026-05-15", text: "Named as a Finalist (Top 5) in the IISE Energy Analytics Challenge - 2026" },
+  { date: "2026-05-15", text: "Presented my research at IISE Annual Meeting - 2026 at Arlington, Texas." },
+  { date: "2024-03-26", text: "Inducted as a member of Alpha Pi Mu." },
+  { date: "2026-02-20", text: "National Champion at the Data4Good Competition hosted by Johns Hopkins University. <a class='inline-link' href='https://ceat.okstate.edu/announcements/iem/2026/osu-graduate-student-team-wins-national-data-four-good-analytics-competition' target='_blank' rel='noopener'>press release</a>" },
+  { date: "2026-02-10", text: "1st Runner-Up at the OSU Datathon, Spears School of Business. <a class='inline-link' href='https://lnkd.in/p/e3Rb5ywf' target='_blank' rel='noopener'>click here</a>" },
+  { date: "2025-11-18", text: "Presented my research at INFORMS Annual Meeting 2025 at Atlanta, Georgia. " },
+  { date: "2025-10-14", text: "Elected as a GPSGA Representative for Business Analytics Students Association." },
+  { date: "2025-10-10", text: "Won the AlphaRamos Marketing Hackathon. <a class='inline-link' href='https://news.okstate.edu/articles/business/2025/ms-bands-alpha-ramos-hackathon' target='_blank' rel='noopener'>press release</a>" },
+  { date: "2025-08-20", text: "Awarded the SAS Advisory Board Scholarship. <a class='inline-link' href='https://lnkd.in/p/epCbnkfM' target='_blank' rel='noopener'>click here</a> " },
+  { date: "2025-08-14", text: "Started my M.S. in Business Analytics and Data Science at Oklahoma State University." },
+  { date: "2025-08-01", text: "Joined <a class='inline-link' href='https://disys-lab.github.io/' target='_blank' rel='noopener'>DISys Lab</a> as a Graduate Research Assistant under Dr. Ramanan." },
+  { date: "2025-07-02", text: "Published a paper at the INFORMS Conference on Service Science, University of Oxford." },
+  { date: "2025-06-15", text: "First-author paper on breast cancer prediction published in PLOS ONE." },
+  { date: "2024-04-15", text: "Inducted as a member of Tau Beta Pi." },
+  { date: "2025-04-15", text: "Won Research Symposium Token Prize at the 2nd Annual IEM Research Symposium at Oklahoma State University." },
+  { date: "2024-10-12", text: "Elected as a Vice President at Oklahoma State University INFORMS Student Chapter." },
+  { date: "2024-08-14", text: "Appointed as a Graduate Teaching Assistant under <a class='inline-link' href='https://ceat.okstate.edu/iem/people/glenn-faculty-profile' target='_blank' rel='noopener'>Dr. Jennifer Glenn</a>." },
+  { date: "2024-08-14", text: "Started my M.S. in Industrial Engineering and Management at Oklahoma State University." },
+  { date: "2024-01-10", text: "Received the Certificate of Excellence at LandQuire for reporting automation." },
+  { date: "2023-06-01", text: "My research on optimization in additive manufacturing process got published in JMMP." }
+];
+
+/* PUBLICATIONS: newest first. Wrap your own name in <span class="me">.
+   group: "Preprints and manuscripts" OR a year string.
+   key + doi drive the "Cited by" badge (see CITATIONS below). */
+var PUBS = [
+  { group: "Preprints and manuscripts", flag: "Manuscript", key: "reserve",
+    title: "Privacy-Preserving Decentralized Stochastic Reserve Coordination of Electrified Chemical Plants with Renewable-Driven Transmission Systems",
+    authors: '<span class="me">Kazi Arman Ahmed</span>, Huynh Q. N. Vo, Saba Ghasemi Naraghi, Paritosh Ramanan, Zheyu Jiang',
+    venue: "Manuscript in preparation, 2026" },
+  { group: "Preprints and manuscripts", flag: "Submitted", key: "fedload",
+    title: "Personalized Federated Load Forecasting for Distributed Industrial Power Systems with Cold-Start Transfer to a New Chemical Plant",
+    authors: '<span class="me">Kazi Arman Ahmed</span>',
+    venue: "IEEE Texas Power and Energy Conference (TPEC), 2027 (submitted)" },
+  { group: "Preprints and manuscripts", flag: "SUBMITTED", key: "decentralized", arxiv: "2606.22973", url: "https://arxiv.org/abs/2606.22973",
+    title: "Decentralized Operations of Decarbonized Chemical Plants with Renewable-driven Transmission Systems",
+    authors: 'Richard Reed, <span class="me">Kazi Arman Ahmed</span>, Saba Ghasemi, Zheyu Jiang, Paritosh Ramanan',
+    venue: "arXiv:2606.22973, 2026, Under Review in Electric Power Systems Research Journal"},
+  { group: "2025", key: "jia",
+    title: "Comorbidity Patterns Before and After Juvenile Idiopathic Arthritis Diagnosis",
+    authors: '<span class="me">Kazi Arman Ahmed</span>, Hamid Hadidi, Mohammad Fili, Dursun Delen, Guiping Hu, Lizhi Wang',
+    venue: "Proc. 2025 INFORMS Conference on Service Science, University of Oxford. Lecture Notes in Operations Research, Springer, 276-288" },
+  { group: "2025", key: "breast", doi: "10.1371/journal.pone.0326221",
+    url: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0326221",
+    title: "Advancing Breast Cancer Prediction: Comparative Analysis of ML Models and Deep-Learning-Based Multi-Model Ensembles on Original and Synthetic Datasets",
+    authors: '<span class="me">Kazi Arman Ahmed</span>, Israt Humaira, Ashiqur Rahman Khan, Md Shamim Hasan, Mukitul Islam, Anik Roy, Mehrab Karim, Mezbah Uddin, Ashique Mohammad, Md Doulotuzzaman Xames',
+    venue: "PLOS ONE, 20(6), e0326221" },
+  { group: "2023", key: "sls", doi: "10.3390/jmmp7040144",
+    url: "https://www.mdpi.com/2504-4494/7/4/144",
+    title: "Optimization of Selective Laser Sintering 3D Printing of Thermoplastic Polyurethane Elastomer: A Statistical Approach",
+    authors: 'Md Mahfuzur Rahman, <span class="me">Kazi Arman Ahmed</span>, Mehrab Karim, Jakir Hassan, Rakesh Roy, Bayazid Bustami, S. M. Nur Alam, Hammad Younes',
+    venue: "Journal of Manufacturing and Materials Processing, 7(4), 144" },
+  { group: "2023", key: "topsis", doi: "10.1007/s41870-023-01397-2",
+    url: "https://link.springer.com/article/10.1007/s41870-023-01397-2",
+    title: "Comparative Analysis of KNN and SVM in Multicriteria Inventory Classification Using TOPSIS",
+    authors: 'Anik Roy, Mukitul Islam, Mehrab Karim, <span class="me">Kazi Arman Ahmed</span>, Ashiqur Rahman Khan, Mezbah Uddin, Md Doulotuzzaman Xames',
+    venue: "International Journal of Information Technology, 15(7), 3613-3622" },
+  { group: "2021", key: "safety",
+    url: "https://www.astesj.com/v06/i02/p96/",
+    title: "Design and Development of an Advanced Affordable Wearable Safety Device for Women: Freedom Against Fearsome",
+    authors: 'Israt Humaira, <span class="me">Kazi Arman Ahmed</span>, Sayantee Roy, Zareen Tasnim Safa, F. M. Tanvir Hasan Raian, Md. Ashrafuzzaman',
+    venue: "Advances in Science, Technology and Engineering Systems Journal, 6(2), 829-836" },
+  { group: "2020", key: "stick", doi: "10.1007/978-3-030-24322-7_7",
+    url: "https://link.springer.com/chapter/10.1007/978-3-030-24322-7_7",
+    title: "Development of an Inexpensive Proficient Smart Walking Stick for Visually Impaired People",
+    authors: 'Puja Saha, Masuda Afrin Tuba, <span class="me">Kazi Arman Ahmed</span>, Md. Ashrafuzzaman',
+    venue: "ICETE 2019, Learning and Analytics in Intelligent Systems, Vol. 3, Springer, 48-56" }
+];
+
+/* CITATION COUNTS. A number here wins over the live lookup.
+   Keys match a publication's "key". Example: { stick: 5, breast: 14 } */
+var CITATIONS = { stick: 5 };
+
+/* ============================================================
+   Rendering + behavior (usually no need to edit below)
+   ============================================================ */
+(function () {
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  function el(tag, cls, html) { var e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }
+  var MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  function prettyDate(iso) { var p = iso.split("-"); var y = p[0], m = +p[1] || 1, d = +p[2] || 1; return (p[2] ? d + " " : "") + MON[m-1] + " " + y; }
+  function yearOf(iso) { return iso.split("-")[0]; }
+
+  var yStamp = $("#yr"); if (yStamp) yStamp.textContent = new Date().getFullYear();
+
+  // avatar photo hides the monogram when it loads
+  var im = $("#avatarImg"), mo = $("#avatarMono");
+  if (im) im.addEventListener("load", function () { if (mo) mo.style.display = "none"; });
+
+  /* ---------- NEWS ---------- */
+  var newsList = $("#newsList"), newsScroll = $("#newsScroll"), yearNav = $("#yearNav"), newsMeta = $("#newsMeta");
+  var firstOfYear = {}, yearsOrder = [], counts = {};
+  NEWS = NEWS.slice().sort(function (a, b) { return b.date.localeCompare(a.date); });  // newest first, whatever order they were typed in
+  NEWS.forEach(function (n) {
+    var li = el("li");
+    li.appendChild(el("time", "news__date", prettyDate(n.date)));
+    li.appendChild(el("p", "news__txt", n.text));
+    var y = yearOf(n.date);
+    if (!(y in counts)) { counts[y] = 0; yearsOrder.push(y); firstOfYear[y] = li; }
+    counts[y]++;
+    newsList.appendChild(li);
+  });
+  if (NEWS.length) {
+    var yy = yearsOrder.slice().sort();
+    newsMeta.textContent = NEWS.length + " entries · " + yy[0] + "-" + yy[yy.length - 1];
+  }
+  var yearBtns = {};
+  yearsOrder.forEach(function (y) {
+    var b = el("button", "year");
+    b.type = "button";
+    b.appendChild(el("span", "year__y", y));
+    b.appendChild(el("span", "year__n", String(counts[y])));
+    b.setAttribute("aria-label", "Jump to " + y + ", " + counts[y] + (counts[y] === 1 ? " entry" : " entries"));
+    b.addEventListener("click", function () {
+      var t = firstOfYear[y];
+      if (window.matchMedia("(max-width: 44rem)").matches) {
+        var top = window.pageYOffset + t.getBoundingClientRect().top - 70;
+        window.scrollTo({ top: top, behavior: "smooth" });
+      } else {
+        newsScroll.scrollTo({ top: Math.max(0, t.offsetTop - 6), behavior: "smooth" });
+      }
+    });
+    yearNav.appendChild(b);
+    yearBtns[y] = b;
+  });
+  function markYear() {
+    var top = newsScroll.scrollTop, cur = yearsOrder[0];
+    yearsOrder.forEach(function (y) { if (firstOfYear[y].offsetTop - 8 <= top) cur = y; });
+    yearsOrder.forEach(function (y) {
+      if (y === cur) yearBtns[y].setAttribute("aria-current", "true");
+      else yearBtns[y].removeAttribute("aria-current");
+    });
+  }
+  if (newsScroll) { newsScroll.addEventListener("scroll", function () { window.requestAnimationFrame(markYear); }, { passive: true }); markYear(); }
+
+  /* ---------- PUBLICATIONS ---------- */
+  var pubList = $("#pubList");
+  var order = [], groups = {};
+  PUBS.forEach(function (p) {
+    if (!(p.group in groups)) { groups[p.group] = []; order.push(p.group); }
+    groups[p.group].push(p);
+  });
+  var pubCount = $("#pubCount"); if (pubCount) pubCount.textContent = PUBS.length;
+  var cutoff = new Date().getFullYear() - 3;   // show the last 4 years; older years go behind "View all"
+  var older = el("div", "pubs__older"); older.hidden = true; older.id = "pubsOlder"; var olderCount = 0;
+  order.forEach(function (g) {
+    var wrap = el("div", "yeargroup");
+    var h = el("div", "yeargroup__h");
+    h.appendChild(el("span", null, g));
+    h.appendChild(el("span", "yeargroup__n", groups[g].length + (groups[g].length === 1 ? " item" : " items")));
+    wrap.appendChild(h);
+    groups[g].forEach(function (p) {
+      var art = el("article", "pub");
+      var t = el("div", "pub__title");
+      if (p.flag) t.appendChild(el("span", "flag", p.flag));
+      if (p.url) { var a = el("a", null, p.title); a.href = p.url; a.target = "_blank"; a.rel = "noopener"; t.appendChild(a); }
+      else t.appendChild(document.createTextNode(p.title));
+      var cite = el("span", "cited"); cite.setAttribute("data-key", p.key || ""); if (p.doi) cite.setAttribute("data-doi", p.doi); if (p.arxiv) cite.setAttribute("data-arxiv", p.arxiv);
+      t.appendChild(document.createTextNode(" ")); t.appendChild(cite);
+      art.appendChild(t);
+      if (p.authors) art.appendChild(el("div", "pub__authors", p.authors));
+      if (p.venue) art.appendChild(el("div", "pub__venue", p.venue));
+      wrap.appendChild(art);
+    });
+    var yr = parseInt(g, 10);
+    if (!isNaN(yr) && yr < cutoff) { older.appendChild(wrap); olderCount += groups[g].length; }
+    else pubList.appendChild(wrap);
+  });
+  if (olderCount) {
+    pubList.appendChild(older);
+    var tog = $("#pubToggle"), label = "View all publications (" + olderCount + " more)";
+    tog.hidden = false; tog.textContent = label; tog.setAttribute("aria-controls", "pubsOlder");
+    tog.addEventListener("click", function () {
+      var open = older.hidden; older.hidden = !open;
+      tog.textContent = open ? "Show recent only" : label;
+      tog.setAttribute("aria-expanded", String(open));
+    });
+  }
+
+  /* ---------- CITATION COUNTS ---------- */
+  var SCHOLAR = "https://scholar.google.com/citations?hl=en&user=C6KttPcAAAAJ";
+  var badges = document.querySelectorAll(".cited");
+  function setBadge(b, n) {
+    if (n == null || b.dataset.done) return;
+    b.innerHTML = 'Cited by <a href="' + SCHOLAR + '" target="_blank" rel="noopener">' + n + '</a>';
+    b.classList.add("on"); b.dataset.done = "1";
+  }
+  function applyMap(map) { if (!map) return; badges.forEach(function (b) { var k = b.getAttribute("data-key"); if (k && map[k] != null) setBadge(b, map[k]); }); }
+  applyMap(CITATIONS);
+  fetch("assets/citations.json").then(function (r) { return r.ok ? r.json() : null; }).then(applyMap).catch(function () {});
+  badges.forEach(function (b) {
+    if (b.dataset.done) return;
+    var doi = b.getAttribute("data-doi"), ax = b.getAttribute("data-arxiv");
+    var id = doi ? "DOI:" + doi : (ax ? "arXiv:" + ax : null); if (!id) return;
+    fetch("https://api.semanticscholar.org/graph/v1/paper/" + id + "?fields=citationCount")
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) { if (d && typeof d.citationCount === "number") setBadge(b, d.citationCount); })
+      .catch(function () {});
+  });
+
+  /* ---------- SCROLL-SPY on the nav ---------- */
+  var links = Array.prototype.slice.call(document.querySelectorAll(".nav a"));
+  var targets = links.map(function (a) { return document.getElementById(a.getAttribute("href").slice(1)); });
+  function spy() {
+    var line = 140, idx = 0;
+    for (var i = 0; i < targets.length; i++) {
+      if (targets[i] && targets[i].getBoundingClientRect().top - line <= 0) idx = i;
+    }
+    links.forEach(function (a, i) {
+      if (i === idx) { a.classList.add("active"); a.setAttribute("aria-current", "true"); }
+      else { a.classList.remove("active"); a.removeAttribute("aria-current"); }
+    });
+  }
+  window.addEventListener("scroll", function () { window.requestAnimationFrame(spy); }, { passive: true });
+  window.addEventListener("resize", spy);
+  spy();
+})();
+</script>
+</body>
 </html>
-
-
-
-
-
