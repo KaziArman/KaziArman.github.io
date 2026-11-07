@@ -367,8 +367,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
           <div class="theme__num">03</div>
           <div>
             <div class="theme__head"><h4 class="theme__title">Healthcare analytics</h4></div>
-            <p class="theme__lede">Real-world clinical records covering more than 10 million patients, used to map how comorbidities emerge before and after a Juvenile Idiopathic Arthritis diagnosis to support earlier detection, alongside machine-learning models for disease prediction.</p>
-            <div class="theme__meta"><span class="tag">Real-world data</span><span class="tag">Trajectory modeling</span><span class="tag">Predictive ML</span></div>
+            <p class="theme__lede">Using Oracle Real-World Data, a clinical database covering millions of patients, I characterize how comorbidities emerge before and after diagnosis of Juvenile Idiopathic Arthritis and Still's disease to support earlier detection. I also benchmark decentralized, privacy-preserving models for early warning of acute kidney injury in intensive care.</p>
+            <div class="theme__meta"><span class="tag">Real-world data</span><span class="tag">Comorbidity analysis</span><span class="tag">Privacy-preserving ML</span></div>
           </div>
         </article>
 
@@ -422,7 +422,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
         <dt>since 2026</dt>
         <dd><b>Advanced Analytics Intern</b>, Data Research and Analytics, AAA, The Auto Club Group <span>Conversational data agents with Google ADK and Gemini over BigQuery and Tableau, Dataplex data-quality checks, and a marketing-attribution model with Google Meridian.</span></dd>
         <dt>2025 to 2026</dt>
-        <dd><b>Graduate Research Assistant</b>, Distributed Intelligent Systems (DISys) Laboratory, Oklahoma State University <span>Privacy-preserving stochastic reserve coordination between a 2,000-bus grid and 26 chemical plants via two-phase ADMM on HPC clusters (cost within 1.3% and emissions within 0.7% of a centralized solution), and trajectory-modeling pipelines on real-world clinical data.</span></dd>
+        <dd><b>Graduate Research Assistant</b>, Distributed Intelligent Systems (DISys) Laboratory, Oklahoma State University <span>Privacy-preserving stochastic reserve coordination between a 2,000-bus grid and 26 chemical plants via two-phase ADMM on HPC clusters (cost within 1.3% and emissions within 0.7% of a centralized solution), and, as co-first author, a deterministic decentralized framework for joint grid and plant scheduling.</span></dd>
         <dt>2024</dt>
         <dd><b>Graduate Teaching Assistant</b>, Oklahoma State University, IEM <span>Python and Excel labs for ENGR 1412, Canvas for 60+ students, roughly 95% positive evaluations.</span></dd>
         <dt>2021 to 2024</dt>
@@ -542,7 +542,7 @@ var NEWS = [
   { date: "2025-08-20", text: "Awarded the SAS Advisory Board Scholarship. <a class='inline-link' href='https://lnkd.in/p/epCbnkfM' target='_blank' rel='noopener'>click here</a> " },
   { date: "2025-08-14", text: "Started my M.S. in Business Analytics and Data Science at Oklahoma State University." },
   { date: "2025-08-01", text: "Joined <a class='inline-link' href='https://disys-lab.github.io/' target='_blank' rel='noopener'>DISys Lab</a> as a Graduate Research Assistant under Dr. Ramanan." },
-  { date: "2025-07-02", text: "Published a paper at the INFORMS Conference on Service Science, University of Oxford." },
+  { date: "2025-07-02", text: "First-author paper accepted at the INFORMS Conference on Service Science (ICSS 2025), University of Oxford." },
   { date: "2025-06-15", text: "First-author paper on breast cancer prediction published in PLOS ONE." },
   { date: "2024-04-15", text: "Inducted as a member of Tau Beta Pi." },
   { date: "2025-04-15", text: "Won Research Symposium Token Prize at the 2nd Annual IEM Research Symposium at Oklahoma State University." },
@@ -560,19 +560,29 @@ var PUBS = [
   { group: "Preprints and manuscripts", flag: "Manuscript", key: "reserve",
     title: "Privacy-Preserving Decentralized Stochastic Reserve Coordination of Electrified Chemical Plants with Renewable-Driven Transmission Systems",
     authors: '<span class="me">Kazi Arman Ahmed</span>, Huynh Q. N. Vo, Saba Ghasemi Naraghi, Paritosh Ramanan, Zheyu Jiang',
-    venue: "Manuscript in preparation, 2026" },
+    venue: "Manuscript in preparation for IEEE Transactions on Power Systems, 2026" },
+  { group: "Preprints and manuscripts", flag: "Under review", key: "decentralized", arxiv: "2606.22973", url: "https://arxiv.org/abs/2606.22973",
+    title: "Decentralized Operations of Decarbonized Chemical Plants with Renewable-driven Transmission Systems",
+    authors: '<span class="me">Kazi Arman Ahmed</span>*, Richard Reed*, Saba Ghasemi, Zheyu Jiang, Paritosh Ramanan',
+    venue: "Electric Power Systems Research (under review), 2026. arXiv:2606.22973. *Equal contribution" },
   { group: "Preprints and manuscripts", flag: "Submitted", key: "fedload",
     title: "Personalized Federated Load Forecasting for Distributed Industrial Power Systems with Cold-Start Transfer to a New Chemical Plant",
-    authors: '<span class="me">Kazi Arman Ahmed</span>',
+    authors: '<span class="me">Kazi Arman Ahmed</span>, Khandaker Fahim Anjum, Israt Humaira',
     venue: "IEEE Texas Power and Energy Conference (TPEC), 2027 (submitted)" },
-  { group: "Preprints and manuscripts", flag: "SUBMITTED", key: "decentralized", arxiv: "2606.22973", url: "https://arxiv.org/abs/2606.22973",
-    title: "Decentralized Operations of Decarbonized Chemical Plants with Renewable-driven Transmission Systems",
-    authors: 'Richard Reed, <span class="me">Kazi Arman Ahmed</span>, Saba Ghasemi, Zheyu Jiang, Paritosh Ramanan',
-    venue: "arXiv:2606.22973, 2026, Under Review in Electric Power Systems Research Journal"},
-  { group: "2025", key: "jia",
+  { group: "Preprints and manuscripts", flag: "Submitted", key: "aki",
+    title: "Decentralized, Privacy-Preserving Early Warning of Acute Kidney Injury in Intensive Care: A Decision-Oriented Benchmark",
+    authors: 'Chinmay Deshpande, <span class="me">Kazi Arman Ahmed</span>',
+    venue: "Southwest Decision Sciences Institute (SWDSI) 56th Annual Meeting, 2027 (submitted)" },
+  { group: "2026", key: "stills", doi: "10.21872/2026IISE_17906",
+    url: "https://doi.org/10.21872/2026IISE_17906",
+    title: "Post-Diagnosis Comorbidity Patterns in Patients with Still's Disease",
+    authors: 'Rafat Rahman, <span class="me">Kazi Arman Ahmed</span>, Mohammad Fili, Hamid Hadidi, Guiping Hu, Dursun Delen, Riyana Binta Azad',
+    venue: "Proc. IISE Annual Conference and Expo, 2026" },
+  { group: "2026", key: "jia",
+    url: "https://link.springer.com/chapter/10.1007/978-3-032-13116-4_22",
     title: "Comorbidity Patterns Before and After Juvenile Idiopathic Arthritis Diagnosis",
     authors: '<span class="me">Kazi Arman Ahmed</span>, Hamid Hadidi, Mohammad Fili, Dursun Delen, Guiping Hu, Lizhi Wang',
-    venue: "Proc. 2025 INFORMS Conference on Service Science, University of Oxford. Lecture Notes in Operations Research, Springer, 276-288" },
+    venue: "Proc. 2025 INFORMS Conference on Service Science (ICSS), University of Oxford. Lecture Notes in Operations Research, Springer, 2026, 276-288" },
   { group: "2025", key: "breast", doi: "10.1371/journal.pone.0326221",
     url: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0326221",
     title: "Advancing Breast Cancer Prediction: Comparative Analysis of ML Models and Deep-Learning-Based Multi-Model Ensembles on Original and Synthetic Datasets",
